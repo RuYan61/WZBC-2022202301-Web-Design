@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>元素的相对定位</title>
+	<style type="text/css">
+		.father{
+			width:300px;
+			height:200px;	
+			background:#ccc;
+			border:1px solid #000;
+			margin: 10px auto;
+			padding:5px;
+		}
+		.child01,.child02{
+			width:100px;
+			height:50px;	
+			background:#ff0;
+			border:1px solid #000;		
+		}
+		.child01{
+			position:relative;           /*绝对定位*/
+			left: 150px;                /*距左边线150px*/
+			top: 100px;                 /*距顶部边线100px*/
+		
+		}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child01">我相对定位</div>	
+			<div class="child02">我没有定位</div>	
+		</div>
+	</body>
+</html>

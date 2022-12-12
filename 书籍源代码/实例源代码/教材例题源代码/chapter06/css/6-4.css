@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{				/*设置页面整体样式*/
+	width:1050px;           /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+	font-family: "微软雅黑"; /*字体为"微软雅黑"*/
+	font-size:13px;			 /*文字大小为12px*/
+	color:#333;			     /*文字颜色为灰色*/
+	position:relative		 /*相对定位*/
+    }
+ /*网页头部的CSS样式开始*/
+header {
+	height:250px;              /*高度250px*/
+	background-color:#FFFFEE ;  /*背景颜色*/
+	background-image:url(../img/banner.jpg);  /*背景图片*/
+	background-repeat: no-repeat;             /*背景图片不平铺*/
+	background-position: center 50px;      /*背景图片位置，左右居中，离顶部50px*/
+	}
+.header-left{	
+	height: 50px;             /*高50px*/
+    }
+.header-right{
+	width:250px;
+	height:50px;
+	line-height: 50px;        /*行高50px*/
+	float:right;              /*向右浮动*/
+	font-size: 13px;	
+	}	
+.header-right img{
+	width:25px;
+	height: 21px;
+	}
+.header-right a{ /*普通链接和访问过的链接样式*/
+	text-decoration: none;	    /*文本无修饰*/
+	color:#111111;
+	}
+.header-text{   /*文字样式*/
+	font-size: 40px;
+	color: #4FAC00;
+	margin-top: 10px;
+	margin-left: 150px;
+    }
+/*导航栏样式开始*/
+nav {				
+	margin-bottom:5px;			
+	height:36px;
+	background-image: repeating-linear-gradient(0deg,#9cf,#fff 60%,#9cf 100%);
+    border-bottom: 1px solid #DBEAEE;
+    border-top: 1px solid #DBEAEE;
+   }
+nav a{
+    display:inline-block;             /*行内级联元素*/
+	width:90px;
+	height:36px;	
+	line-height:36px; 	     	/*行高36px*/				
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 10px 0 20px;	 	/*上、右、下、左的外边距依次为0px,10px, 0px,20px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		    /*文字居中对齐*/
+	font-family:tahoma;	
+	font-size:14px;
+	color:#333;
+	font-weight:bold; 		   /*字体加粗*/
+    }		

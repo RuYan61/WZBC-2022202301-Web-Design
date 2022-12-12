@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html> 
+<html>  
+<head>   
+<meta charset="UTF-8">  
+<title>使用图片</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "red";  
+    context.fillRect(0, 0, 400, 300);  
+    image = new Image(); 
+    image.src = "imagemr.jpg";  
+    image.onload = function() 
+    {  
+        drawImg(context,image);  
+    };       
+}  
+function drawImg(context,image)
+{  
+    for(var i = 0;i < 7;i++)  
+       context.drawImage(image,i * 50,i * 25,100,100);
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

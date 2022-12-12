@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>将div和table元素转换为可编辑状态</title>
+</head>
+<body>
+<!--定义一个可编辑的div元素-->
+<div contentEditable="true" style="width:500px;border:1px solid black">
+	HTML5从入门到精通
+	<!--该元素的父元素有contentEditable="true",因此该表格也是可编辑的-->
+	<table style="width:500px;border-collapse:collapse" border="l">
+		<tr>
+			<td>JavaScript从入门到精通</td>
+			<td>PHP从入门到精通</td>
+		</tr>
+		<tr>
+			<td>C#从入门到精通</td>
+			<td>Java从入门到精通</td>
+		</tr>
+	</table>
+</div>
+<hr/>
+<!--这个表格默认不可编辑，双击之后该表格变为可编辑状态-->
+<table id="target" ondblclick="this.contentEditable=true;" style="width:420px;border-collapse:collapse" border="l">
+	<tr>
+		<td>JavaScript</td>
+		<td>PHP</td>
+	</tr>
+	<tr>
+		<td>C#</td>
+		<td>Java</td>
+	</tr>
+</table>
+</body>
+</html>

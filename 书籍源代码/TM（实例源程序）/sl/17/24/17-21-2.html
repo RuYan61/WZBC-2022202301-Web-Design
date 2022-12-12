@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html> 
+<html>  
+<head>   
+<meta charset="UTF-8">  
+<title>图片的平铺</title>  
+<script >
+function draw(id)
+{  
+    var image = new Image();      
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;     
+    var context = canvas.getContext('2d'); 
+    image.src = "imagemr.jpg"; 
+    image.onload = function()
+    {  
+        //创建填充样式，全方向平铺
+        var ptrn = context.createPattern(image,'repeat'); 
+        //指定填充样式
+        context.fillStyle = ptrn;  
+        //填充画布
+        context.fillRect(0,0,400,300);  
+    };        
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

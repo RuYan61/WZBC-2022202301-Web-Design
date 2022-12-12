@@ -1,0 +1,276 @@
+@charset "utf-8";
+*{                                  /*针对所有的HTML元素定义样式*/
+	margin:0;                       /*外边距为0px*/ 
+    padding:0;                       /*内边距为0px*/ 
+    box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+a{                                  /*设置超链接的样式*/
+	text-decoration: none;          /*无修饰*/
+}
+@font-face {                        /*定义服务器字体*/
+	font-family: 'iconfont';        /*定义服务器字体名称*/ 
+    src:url('../fonts/iconfont.ttf');           /*定义服务器字体文件路径*/
+} 
+body{					/*设置页面整体样式*/
+	width:1050px;            /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为12px*/
+	color:#333;			/*文字颜色为灰色*/
+	position:relative			/*相对定位*/
+}
+h3{                          /*h3标题的样式*/                   
+	font-size:16px;
+	color: #545861;      	/*文字颜色为浅灰色*/
+	font-weight: 500;       /*文字粗细500*/
+}
+/*网页头部的CSS样式开始*/
+header {
+	height:250px;              /*高度250px*/
+	background-color:#FFFFEE ;  /*背景颜色*/
+	background-image:url(../img/banner.jpg);  /*背景图片*/
+	background-repeat: no-repeat;             /*背景图片不平铺*/
+	background-position: center 50px;         /*背景图片位置，左右居中，离顶部50px*/
+}
+.header-left{	
+	height: 50px;             /*高50px*/
+}
+.header-right{
+	width:250px;
+	height:50px;
+	line-height: 50px;             /*行高50px*/
+	float:right;                   /*向右浮动*/
+	font-size: 13px;	
+}	
+.header-right img{
+	width:25px;
+	height: 21px;
+}
+.header-right a:link,.header-right a:visited{ /*普通链接和访问过的链接样式*/
+	text-decoration: none;	                  /*文本无修饰*/
+	color:#111111;
+	}
+.header-right a:active,.header-right a:hover{   /*激活链接和悬停链接样式*/              
+	color:blue;
+}
+.header-text{   /*文字样式*/
+	font-size: 40px;
+	color: #4FAC00;
+	margin-top: 10px;
+	margin-left: 150px;
+    }
+/*网页头部的CSS样式结束*/
+
+/*导航栏样式开始*/
+nav {				
+	margin-bottom:5px;
+	height:36px;
+	background-image: repeating-linear-gradient(0deg,#9cf,#fff 60%,#9cf 100%);
+    border-bottom: 1px solid #DBEAEE;
+    border-top: 1px solid #DBEAEE;
+}
+nav ul {					    /*设置菜单列表的样式*/
+	list-style-type:none; 		/*不显示项目符号*/		            
+}
+nav ul li {					/*设置菜单列表项的样式*/
+	display:inline; 		/*内联元素*/	
+	line-height:36px; 		/*行高36px*/	
+}
+nav ul li  a{
+	display:block;             /*块级元素*/
+	width:90px;
+	height:36px;			     
+	float: left;                /*向左浮动*/
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 10px 0 20px;	 	/*上、右、下、左的外边距依次为0px,10px, 0px,20px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		    /*文字居中对齐*/
+	font-family:tahoma;	
+	font-size:14px;
+	font-weight:bold; 		   /*字体加粗*/
+}
+nav ul li:nth-child(1)  a{    /*设置第一个导航菜单项“首页”的宽度为50px*/
+	width: 50px;
+	}
+	
+nav ul li a:link, nav ul li a:visited {		/*菜单项普通链接、访问过链接的样式*/
+	color:#333;				/*浅黑色文字*/
+}
+nav ul li a:active,nav ul li a:hover {			/*激活链接和悬停链接 样式*/
+	color:#FFF; 			/*白色文字*/
+	background-image: repeating-linear-gradient(0deg,#36c,#9CF 60%,#fff 100%);
+}
+/*导航栏样式结束*/
+/*网页中部内容样式开始*/
+#content{
+	width:1050px;
+	height:auto;	   /*自动默认高度*/
+}
+
+/*二级页面中间-左侧样式*/
+#content-left{
+	width:250px;
+	height:auto;             /*自动默认高度*/
+	float: left;             /*向左浮动*/
+}
+/*设置左侧纵向导航菜单的样式*/
+#content-left ul{            
+	list-style: none;        /*不显示项目列表符号*/ 
+	width:250px; 	
+	background:#fff;         /*白色背景*/ 
+	border-radius:10px;      /*10px圆角半径*/ 
+	margin:0 auto;           /*上下外边界为0，左右根据宽度自适应相同值（即居中）*/           
+	}
+#content-left ul li{        /*设置列表项的样式*/
+	width:250px; 
+	height:50px;	
+	margin-bottom:1px;     /*下外边距1px*/
+	padding-left:80px ;	   /*左内边距80px*/
+	background:#DDDDDD ;
+	font-size:14px; 	
+	line-height:55px;     /*行高55px*/
+	text-align:left;       /*文字左对齐*/
+	/*font-family:"微软雅黑";*/
+	}
+#content-left ul li a:link, #content-left ul li a:visited{
+	color:#333;	
+}
+#content-left ul li a:hover{
+	color: #0091D8;	
+}
+
+/*需要单独控制的列表项,第一个和最后一个列表项样式*/		
+#content-left ul .tp{
+	font-size:18px;
+	font-weight:500;
+	padding:0px ;                  /*内边距0px*/
+	text-align: center;
+	width:250px; 
+	height:65px;
+	line-height:80px ;
+	background: #BBB;
+	border-radius:10px 0 0 0;  /*左上圆角半径10px,其他角为直角*/
+	}
+#content-left ul .yj{
+	height:20px;
+	border-radius:0 0 0 10px;  /*左下圆角半径10px,其他角为直角*/
+	margin-bottom:5px ;        /*下外边距5px*/
+	}
+/*二级页面中间-左侧样式结束*/
+
+/*二级页面中间-右侧样式*/
+#content-right{
+	float: right;
+	width:800px;
+	height: auto;
+}
+#content-right .tt{
+    height: 40px;
+    width:785px;
+    margin-left:15px ;  /*左外边距15px*/
+    border-bottom: 2px solid #D6D6D6;  /*下边框样式，用下边框实现水平线效果*/
+}
+#content-right h3{
+   font-weight: 500;
+   font-size:16px ;
+   border-bottom:2px solid #0091D8; /*下边框样式，实现标题下面的横线效果*/
+   width:90px;             /*标题空间长度90px*/
+   padding: 10px 0 7px 5px;    /*内边距上、右、下、左分别是10px、0、7px、5px*/  
+}
+#content-right #article{
+	width:800px;
+	height:auto;	
+}
+
+/*产品中心页面中，产品样式定义*/	
+#content-right  #article .products{
+	width:800px;
+}
+#article .products ul{
+	list-style: none;
+}
+#article .products ul li{
+	width:180px;
+	height:210px;
+	float:left;
+	margin: 10px;
+	font-size:14px ;
+	text-align: center;
+}
+
+#article .products ul li img{
+	width:180px;
+	height:180px;
+	margin:10px;
+}
+#article .products ul li a:hover {
+	color:#0091D8;
+}
+#article .products ul li a:hover img{
+	border:2px solid #0091D8;
+}
+
+/*分页导航样式*/
+#article .page{
+clear: both;
+text-align: center;
+padding:15px 0 ;
+}
+#article .page ul{
+margin-top: 10px;   /*上外边距10px*/
+}
+#article .page  li{
+display: inline;    /*在一行上显示*/
+}
+
+#article .page  a{
+display:inline-block;
+width:20px;
+height: 20px;
+border: 1px solid #0091D8;
+font-size: 14px;
+text-align: center;
+line-height: 20px;
+font-family: "宋体";
+}
+#article .page  li:nth-child(3) a{   /*第三个li加背景*/
+	background-color: #0091D8;
+}
+#article .page  a:hover{   /*设置鼠标悬停时背景色*/
+background-color: #DDD;
+}
+/*产品中心页面，产品样式定义结束*/
+
+/* footer样式开始 */
+ footer{
+ 	clear: both;                  /*清除两侧浮动*/
+	/*width:1050px;*/
+	width:100%;                  /*宽度100%，即1050px*/
+	height:100px;
+	background: #545861;
+	border-bottom: 1px solid #fff; /*下边框1px白色实线*/
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #ffffff;               /*白色文字*/
+	text-align: center;	          /*文字水平居中*/
+}
+footer .link{
+	padding-top :25px ;           /*上内边距25px*/  
+	
+}
+footer .link a{
+	display:inline-block;         /*内联元素*/	
+	width:70px;
+	height:36px;			
+	color: #ffffff;
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 14px 0 14px;	 	/*上、右、下、左的外边距依次为0px,14px, 0px,14px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		/*文字居中对齐*/
+}
+
+footer .link a:hover {			/*鼠标悬停链接的样式*/	
+	color:#CCC; 			    /*浅灰色文字*/
+	text-decoration: underline; /*下划线修饰*/  
+}
+/* footer样式结束 */

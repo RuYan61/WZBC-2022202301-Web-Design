@@ -1,0 +1,893 @@
+@charset "utf-8";
+
+*{                                  /*针对所有的HTML元素定义样式*/
+	margin:0;                       /*外边距为0px*/ 
+    padding:0;                       /*内边距为0px*/ 
+    box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+
+a{                                  /*设置超链接的样式*/
+	text-decoration: none;          /*无修饰*/
+}
+@font-face {                        /*定义服务器字体*/
+	font-family: 'iconfont';        /*定义服务器字体名称*/ 
+    src:url('../fonts/iconfont.ttf');           /*定义服务器字体文件路径*/
+} 
+body{					/*设置页面整体样式*/
+	width:1050px;            /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为13px*/
+	color:#333;			/*文字颜色为灰色*/
+	position:relative			/*相对定位*/
+}
+h3{                          /*h3标题的样式*/                   
+	font-size:16px;
+	color: #545861;      	/*文字颜色为浅灰色*/
+	font-weight: 500;       /*文字粗细500*/
+}
+h4{                         /*h4标题的样式*/
+	font-size:14px;	        /*文字大小为14px*/
+}
+h5{                         /*h5标题的样式*/
+	font-size:13px;	        /*文字大小为13px*/  
+}
+/*网页头部的CSS样式开始*/
+header {
+	height:250px;              /*高度250px*/
+	background-color:#FFFFEE ;  /*背景颜色*/
+	background-image:url(../img/banner.jpg);  /*背景图片*/
+	background-repeat: no-repeat;             /*背景图片不平铺*/
+	background-position: center 50px;         /*背景图片位置，左右居中，离顶部50px*/
+}
+.header-left{	
+	height: 50px;             /*高50px*/
+}
+.header-right{
+	width:250px;
+	height:50px;
+	line-height: 50px;             /*行高50px*/
+	float:right;                   /*向右浮动*/
+	font-size: 13px;	
+}	
+.header-right img{
+	width:25px;
+	height: 21px;
+}
+.header-right a:link,.header-right a:visited{ /*普通链接和访问过的链接样式*/
+	text-decoration: none;	                  /*文本无修饰*/
+	color:#111111;
+	}
+.header-right a:active,.header-right a:hover{   /*激活链接和悬停链接样式*/              
+	color:blue;
+}
+.header-text{   /*文字样式*/
+	font-size: 40px;
+	color: #4FAC00;
+	margin-top: 10px;
+	margin-left: 150px;
+    }
+/*网页头部的CSS样式结束*/
+
+/*导航栏样式开始*/
+nav {				
+	margin-bottom:5px;
+	height:36px;
+	background-image: repeating-linear-gradient(0deg,#9cf,#fff 60%,#9cf 100%);
+    border-bottom: 1px solid #DBEAEE;
+    border-top: 1px solid #DBEAEE;
+}
+nav ul {					    /*设置菜单列表的样式*/
+	list-style-type:none; 		/*不显示项目符号*/		            
+}
+nav ul li {					/*设置菜单列表项的样式*/
+	display:inline; 		/*内联元素*/	
+	line-height:36px; 		/*行高36px*/	
+}
+nav ul li  a{
+	display:block;             /*块级元素*/
+	width:90px;
+	height:36px;			     
+	float: left;                /*向左浮动*/
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 10px 0 20px;	 	/*上、右、下、左的外边距依次为0px,10px, 0px,20px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		    /*文字居中对齐*/
+	font-family:tahoma;	
+	font-size:14px;
+	font-weight:bold; 		   /*字体加粗*/
+}
+nav ul li:nth-child(1)  a{    /*设置第一个导航菜单项“首页”的宽度为50px*/
+	width: 50px;
+	}
+	
+nav ul li a:link, nav ul li a:visited {		/*菜单项普通链接、访问过链接的样式*/
+	color:#333;				/*浅黑色文字*/
+}
+nav ul li a:active,nav ul li a:hover {			/*激活链接和悬停链接 样式*/
+	color:#FFF; 			/*白色文字*/
+	background-image: repeating-linear-gradient(0deg,#36c,#9CF 60%,#fff 100%);
+}
+/*导航栏样式结束*/
+
+/*网页中部内容样式开始*/
+#content{              /*页面中部盒子样式*/
+	width:1050px;
+	height:auto;	   /*自动默认高度*/
+}
+
+/*首页中部-热销产品样式开始*/
+#hotproduct{
+	height:auto;	
+}
+#hotproduct ul{                         /*设置热销产品列表的样式*/
+	list-style: none;                   /*不显示项目符号*/	
+	width:1050px;
+	height:158px;
+	padding:6px 0 0px 4px;             /*上、右、下、左的内边距依次为6px,0px,0px,4px*/
+	border:2px solid #DDDDDD;          /*热销产品区边框为2px的灰色实线*/ 
+}
+#hotproduct ul li{	                   /*设置热销产品列表项的样式*/     	
+	width:160px;	
+	display: inline-block;            /*内联元素*/
+	float: left;                      /*向左浮动 */    
+	margin-right:10px;                /*右外边距10px*/
+	margin-bottom: 1px;               /*下外边距1px*/
+	position: relative;               /*相对定位*/
+	-webkit-perspective:250px;	      /*透视效果：子元素与镜头之间的距离为250px*/  
+}
+
+#hotproduct ul li.evenlist {	     /*设置热销产品列表项中偶数项的样式*/ 
+	width:80px;
+	height:148px;
+	border-right: 1px solid #ddd;      /*右边框为1px的灰色实线*/
+	}	
+#hotproduct ul li.lastlist{	           /*设置热销产品列表项中最后一项的样式*/ 
+	width:80px;
+	height:148px;
+	border-right: 0px;                  /*不设置右边框*/
+	} 
+#hotproduct ul li img{                   /*设置热销产品列表项中图像的样式*/ 
+	width:160px;
+	height: 141px;		
+	position: absolute;                 /*绝对定位*/
+	left:0;                             /*离左侧0px*/
+	top:0;                              /*离顶部0px*/  
+	-webkit-backface-visibility:hidden; /*元素背面不可见*/
+	transition:all 0.5s ease-in 0s;     /*0.5秒完成动画*/
+}
+
+#hotproduct ul li img.fan{               /*设置图片的样式*/
+ 	-webkit-transform:rotateX(-180deg);  /*图像沿X轴3D旋转-180度*/
+ }
+#hotproduct ul li:hover img.fan{         /*设置鼠标悬停在图片上时样式*/
+ 	-webkit-transform:rotateX(0deg);    /*图像沿X轴3D旋转0度*/
+ }
+#hotproduct ul li:hover img.zheng{
+ 	-webkit-transform:rotateX(180deg);
+ }
+
+
+#hotproduct strong{	         /*定义strong样式*/
+	display: block;          /*块级元素*/
+	margin:10px 0 0 0;        /*上、右、下、左的内边距依次为10px,0px,0px,0px*/
+}
+#hotproduct a{                /*设置热销产品区中超链接的样式*/     
+	display: inline-block;     
+	width:75px;
+	height: 26px;
+	background-color: #494949;
+	font-size:13px;
+	color:#FFF ;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 15px;   
+	line-height:26px ;
+}
+#hotproduct a:after{                              /*在超链接后插入内容*/
+	content: url(../img/triangle-icon-white.png); /*插入图片*/
+	padding-left: 5px;                            /*左内边距5px*/
+	}
+/*首页中部-热销产品样式结束*/	
+
+/*首页中部-主体部分样式开始*/		
+#main{	
+	clear: both;                         /*清除两侧浮动*/
+}
+#main .main_left,#main .main_center,#main .main_right{ /*定义主体部分的左、中、右三块*/
+	padding:0px 20px;                                  /*内边距上、下为0px,左、右为20px*/
+	margin-top:20px ;                                  /*上外边距20px*/
+	font-size: 13px;	                              /*文字大小13px*/
+	position: relative;                               /*相对定位*/
+}
+#main h3{
+	margin-bottom:12px ;                          /*下外边距20px*/
+}
+
+/*主体左侧样式开始*/
+#main .main_left{
+	width:307px;
+	padding-left: 0px;                       /*左侧内边距0px*/
+	float: left;
+}
+
+#main .main_left video{               /*视频的样式*/
+	width:285px;
+	height: 200px;
+	background-color:#CCCCCC;
+	border: 1px solid #BBBBBB;
+}
+/*首页联系方式盒子样式开始*/
+#main .main_left .lianxi{   
+	width:285px;
+	height: auto;
+	border:1px solid #DDDDDD;
+	border-radius: 5px;
+	margin-top: 15px;
+	padding: 0 15px;	
+}
+#main .main_left .lianxi p{
+	font-size: 13px;
+	height:50px;
+	line-height: 20px;	
+	margin-top:8px; 
+}
+#main .main_left .lianxi img{
+	width:43px;
+	height:43px;
+	float: left;
+	margin-right: 15px ;
+}
+/*首页联系方式盒子样式结束*/
+/*主体左侧样式结束*/
+
+/*主体中部样式开始--企业新闻样式*/
+#main .main_center{	
+	width:390px;
+	border-left:3px solid #DDD ;         /*左边框3px浅灰色实线*/
+	border-right:3px solid #DDD ;         /*右边框3px浅灰色实线*/  
+	margin-bottom: 10px;                  /*下外边距10px*/
+	float: left;
+}
+#main .main_center ul li{                /*列表项的样式*/
+	border-top:1px dotted #999999;    /*上边框1px灰色点线*/    
+	padding:5px 0px;                   /*上、右、下、左的内边距依次为5px,0px,5px,0px*/
+	white-space: nowrap;       /*强制文本不能换行*/
+	overflow: hidden;          /*隐藏溢出文本*/
+	text-overflow: ellipsis;  /*溢出文本修剪显示省略标记*/
+	line-height: 19px;         /*行高19px*/ 
+}
+/*在列表项内容前插入三角图标*/
+#main .main_center ul li:before{
+	content:url(../img/triangle-icon-blue.jpg);	    
+	padding-right:4px;                                       
+}
+#main .main_center .date{
+	color:#999999;	
+	font-size: 13px;
+	display: block;                          /*块级元素*/              
+	margin: 0 0 10px 10px;                   /*上、右、下、左的外边距依次为0px,0px,10px,10px*/
+}
+/*主体中部样式结束*/
+
+/*主体右侧样式开始*/
+#main .main_right{
+	width:350px;
+	padding-right:0px ;               /*右内边距0px*/    
+	float: right;             
+}
+#main .main_right .imgbox{     /*客户案例的盒子样式*/
+	width:325px;
+	height:200px;
+	position: relative;
+    overflow: hidden;
+}
+#main .main_right .imgbox img{      /*客户案例的图片样式*/
+	width:325px;
+	height:200px;
+}
+#main .main_right .imgbox hgroup{   /*客户案例的盒子中，文本样式*/
+	padding-top: 20px;
+	text-align: center;
+	position: absolute;
+	left:0;
+	top:-200px;
+	width:325px;
+	height:200px;
+	background: rgba(0,0,0,0.5);
+	transition:all 0.5s ease-in 0s;   /*过度效果*/
+}
+#main .main_right .imgbox hgroup h3{
+	color:#BBB;
+}
+#main .main_right .imgbox:hover hgroup{  /*鼠标指向时，文本位置（下滑）*/
+	position: absolute;
+	left:0;
+	top:0;	
+}
+#main .main_right ul li{
+	line-height: 27px;               /*行高27px*/         
+	margin-left:20px ;               /*左内边距20px*/   
+}
+
+/*主体部分无序列表中超链接样式定义开始*/
+#main ul a{
+	text-decoration: none;          /*文本无修饰*/
+	color:#333333;
+}
+#main ul a:link,a:visited{            /**/
+	color:#333333;	
+}
+#main ul a:hover{
+	color:red;
+	text-decoration: underline;     /*加下划线*/
+}
+/*主体部分无序列表中超链接样式定义结束*/
+#main .more                        /*定义MORE的样式*/
+{	
+	position: absolute;           /*绝对定位*/
+	top:10px;                     /*距顶部10px*/  
+	right: 10px;                  /*离右边10px*/
+	text-decoration: none;        /*无修饰*/
+	color: #0091D8;	
+}
+/*首页中部-主体部分样式结束*/	
+
+/*首页中部内容样式结束*/
+
+/* footer样式开始 */
+ footer{
+ 	clear: both;                  /*清除两侧浮动*/	
+	height:100px;
+	background: #545861;
+	border-bottom: 1px solid #fff; /*下边框1px白色实线*/
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #ffffff;               /*白色文字*/
+	text-align: center;	          /*文字水平居中*/
+}
+footer .link{
+	padding-top :25px ;           /*上内边距25px*/  
+	
+}
+footer .link a{
+	display:inline-block;         /*内联元素*/	
+	width:70px;
+	height:36px;			
+	color: #ffffff;
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 14px 0 14px;	 	/*上、右、下、左的外边距依次为0px,14px, 0px,14px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		/*文字居中对齐*/
+}
+
+footer .link a:hover {			/*鼠标悬停链接的样式*/	
+	color:#CCC; 			    /*浅灰色文字*/
+	text-decoration: underline; /*下划线修饰*/  
+}
+/* footer样式结束 */
+
+/*在线咨询样式开始*/
+.online_zx{
+	position: fixed;
+	top:30px;
+	right:10px;
+}
+/*在线咨询样式结束*/
+
+/*二级页面页面中间内容样式开始*/
+/*二级页面中间-左侧样式*/
+#content-left{
+	width:250px;
+	height:auto;             /*自动默认高度*/
+	float: left;             /*向左浮动*/
+}
+/*设置左侧纵向导航菜单的样式*/
+#content-left ul{            
+	list-style: none;        /*不显示项目列表符号*/ 
+	width:250px; 	
+	background:#fff;         /*白色背景*/ 
+	border-radius:10px;      /*10px圆角半径*/ 
+	margin:0 auto;           /*上下外边界为0，左右根据宽度自适应相同值（即居中）*/           
+	}
+#content-left ul li{        /*设置列表项的样式*/
+	width:250px; 
+	height:50px;	
+	margin-bottom:1px;     /*下外边距1px*/
+	padding-left:80px ;	   /*左内边距80px*/
+	background:#DDDDDD ;
+	font-size:14px; 	
+	line-height:55px;     /*行高55px*/
+	text-align:left;       /*文字左对齐*/
+	/*font-family:"微软雅黑";*/
+	}
+#content-left ul li a:link, #content-left ul li a:visited{
+	color:#333;	
+}
+#content-left ul li a:hover{
+	color: #0091D8;	
+}
+
+/*需要单独控制的列表项,第一个和最后一个列表项样式*/		
+#content-left ul .tp{
+	font-size:18px;
+	font-weight:500;
+	padding:0px ;                  /*内边距0px*/
+	text-align: center;
+	width:250px; 
+	height:65px;
+	line-height:80px ;
+	background: #BBB;
+	border-radius:10px 0 0 0;  /*左上圆角半径10px,其他角为直角*/
+	}
+#content-left ul .yj{
+	height:20px;
+	border-radius:0 0 0 10px;  /*左下圆角半径10px,其他角为直角*/
+	margin-bottom:5px ;        /*下外边距5px*/
+	}
+/*二级页面中间-左侧样式结束*/
+
+/*二级页面中间-右侧样式*/
+#content-right{
+	float: right;
+	width:800px;
+	height: auto;
+}
+#content-right .tt{
+    height: 40px;
+    width:785px;
+    margin-left:15px ;  /*左外边距15px*/
+    border-bottom: 2px solid #D6D6D6;  /*下边框样式，用下边框实现水平线效果*/
+}
+#content-right h3{
+   font-weight: 500;
+   font-size:16px ;
+   border-bottom:2px solid #0091D8; /*下边框样式，实现标题下面的横线效果*/
+   width:90px;             /*标题空间长度90px*/
+   padding: 10px 0 7px 5px;    /*内边距上、右、下、左分别是10px、0、7px、5px*/  
+}
+#content-right #article{
+	width:800px;
+	height:auto;	
+}
+
+/*产品中心页面中，产品样式定义*/	
+#content-right  #article .products{
+	width:800px;
+}
+#article .products ul{
+	list-style: none;
+
+}
+#article .products ul li{
+	width:180px;
+	height:210px;
+	float:left;
+	margin: 10px;
+	font-size:14px ;
+	text-align: center;
+}
+
+#article .products ul li img{
+	width:180px;
+	height:180px;
+	margin:10px;
+}
+#article .products ul li a:hover {
+	color:#0091D8;
+}
+#article .products ul li a:hover img{
+	border:2px solid #0091D8;
+}
+
+/*分页导航样式开始*/
+#article .page{
+	clear: both;
+	text-align: center;
+	padding:15px 0 ;
+}
+#article .page ul{
+	margin-top: 10px;   /*上外边距10px*/
+}
+#article .page  li{
+	display: inline;    /*在一行上显示*/
+}
+
+#article .page  a{
+	display:inline-block;
+	width:20px;
+	height: 20px;
+	border: 1px solid #0091D8;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+	font-family: "宋体";
+}
+#article .page  li:nth-child(3) a{   /*第三个li加背景*/
+	background-color: #0091D8;
+}
+#article .page  a:hover{   /*设置鼠标悬停时背景色*/
+background-color: #DDD;
+}
+/*分页导航样式结束*/
+/*产品中心页面，产品样式定义结束*/
+
+
+/*产品中心--LED射灯 页面，表格样式*/
+#article .products table{
+	margin: 10px 0 5px 16px;
+}
+#article .products .td_text{
+	padding: 5px;
+	text-align: left;      /*水平向左对齐*/
+	vertical-align: top;   /*垂直靠上对齐*/
+	text-indent:2em;       /*段首空两个汉字*/
+} 
+/*产品中心--LED射灯 页面，表格样式结束*/
+
+
+/*关于我们内容样式*/
+#article .about{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+}
+#article .about img{
+	width:780px;
+}
+#article .about p{
+    font-family:Tahoma;
+    color:#333;	
+	font-size: 13px;	
+	line-height: 24px;
+	text-indent:2em ;  /*首行缩进2个汉字*/
+	margin: 5px;
+}
+
+/*新闻动态--公司新闻列表样式开始*/
+ #article .news{
+	width:780px;
+	height: auto;
+	margin: 20px 0px 20px 20px;
+
+}
+#article .news ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#article .news ul li{
+	width:780px;
+	height:30px;
+	float:left;
+	margin: 5px;
+	font-size:13px ;
+	color: #333;	
+	border-bottom:1px dotted #999999 ;	 /*下边框1px浅灰色点线*/
+}
+#article .news ul li:before{
+	content: url(../img/triangle-icon-blue.jpg); /*列表项内容前插入图片*/
+	margin-right:5px ;
+	}
+#article .news ul li:nth-last-child(1){   /*定义最后一个列表项的样式*/
+	border-bottom:0px ;                   /*无下边框*/
+}
+#article .news ul li a:link,a:visited{
+	text-decoration: none;
+	color: #494949;	
+}
+#article .news ul li a:hover{
+	color: #0091D8;
+}
+#article .news ul li .date{	
+	float:right;
+	margin-right: 10px;	
+}
+/*新闻动态--公司新闻列表样式结束*/
+
+/*联系方式样式定义开始*/
+#content .contact{
+	width:1050px;
+	height: auto;
+	margin: 20px 0 20px 0px;
+}
+#content .contact h3{
+	font-size: 16px;
+	font-weight:500;
+	margin:20px 0 10px 5px ;
+}
+#content .contact img{
+	width: 550px;
+	height: 400px;
+	float: left;
+	margin: 10px 30px 10px 0;
+	border: 1px solid #D6D6D6;
+}
+
+#content .contact h4{
+	font-size:14px;
+	font-weight:600;
+	margin:30px 0 10px 30px;	
+}
+#content .contact  p{	
+	text-indent: 2em;      /*首行缩进2em*/
+}
+
+/*联系方式样式定义结束*/
+
+/*LED射灯产品详细信息页面部分样式*/
+#content-right .dt{  /*三级页面-详细信息中，h3标题的宽度;*/
+	width:150px;
+}
+#article .led_sd_details{
+	width:780px;
+	height: auto;
+	margin: 20px 0px 20px 20px;
+}
+#article .led_sd_details img{
+	width:250px;
+	height:250px;
+	float: left;
+	margin-right:30px;
+}
+#article .led_sd_details h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 10px 0;
+}
+#article .led_sd_details ul{	
+	list-style-position: inside;	/*将列表修饰符定义在列表之内*/
+}
+ #article .led_sd_details ul li{
+ 	line-height: 22px;
+ 	font-size: 13px;
+ }
+ #article .led_sd_details .number{
+ 	color: red;
+ }
+ 
+ /*景观路灯，大图样式*/
+#article .led_ld_show{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+	text-align: center;
+}
+
+#article .led_ld_show img{
+	width:725px;
+	height: 450px;
+}
+
+
+/*招商加盟的页面部分样式*/
+#article .join{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+	color: #333;
+	font-family: tahoma;
+}
+#article .join h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 10px 0;
+}
+/*招商加盟--合作方式页面部分样式*/
+#article .join_ways{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 30px;
+	color: #333;
+	font-family: tahoma;
+}
+.way1{
+	padding:4px;
+	margin-left:12px;
+    color:#333 ;
+}
+.way2{
+	padding:5px;
+	margin-left:10px;
+	list-style-type:disc;
+}
+.way3{
+	margin:6px 0px 4px 2px;
+}
+.way4{
+	margin-left:25px;
+}
+
+/*新闻详细信息的页面部分样式*/
+#article .news_details{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+	color: #333;
+	line-height: 22px;
+}
+#article .news_details hgroup{     /*分组标题的样式*/
+	text-align: center;
+}
+#article .news_details h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 10px 0;
+}
+#article .news_details h5{
+	font-size: 13px;
+	font-weight:500 ;
+	color: #999;
+	margin: 10px 0;
+}
+figure{	                 /*设置标签figure的样式*/
+	margin: 15px 30px;
+}
+/*产品资讯的页面部分样式*/
+#article .news_proinfo{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+	color: #333;
+	line-height: 22px;
+}
+#article .news_proinfo ul li{
+	margin-left: 20px;	
+    clear: both;	              /*如果定义了图片向左浮动，必须定义li清除浮动*/
+}
+#article .news_proinfo img{
+	width:150px;
+	height: 130px;
+	margin:0 20px 10px 0;	
+    float: left;                 /*如果希望图文混排，需要定义图片向左浮动，但必须同时定义li清除浮动*/
+}
+#article .news_proinfo h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 10px 0;
+}
+
+#article .news_proinfo ul li a{
+	color:#0077FF;
+	text-decoration: none;	
+}
+
+/*产品资讯详情部分页面样式*/
+#article .news_proinfo_details{	
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+	color: #333;
+	line-height: 22px;	
+}
+#article .news_proinfo_details h4,h5{
+	text-align: center;
+}	
+#article .news_proinfo_details h5{
+	color: #777777;
+	font-weight:500 ;
+	}
+#article .news_proinfo_details p{
+	text-indent: 2em;
+	margin: 10px 0;
+}
+#article .news_proinfo_details img{
+	width:320px;
+	float: left;
+	margin: 10px 20px 10px 28px;
+}
+/*营销动态部分页面样式*/
+#article .news_marketing{	
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 30px;
+	color: #333;
+	line-height: 22px;	
+}
+#article .news_marketing h4{
+	text-align: center;
+}	
+
+#article .news_marketing table{
+	width:650px;
+	border: 1px solid #666;
+	border-collapse: collapse;
+	text-align: center;
+}
+#article .news_marketing th,td{
+	height:25px;
+	border:1px solid #999 ;
+	text-align: center;
+}
+#article .news_marketing th{
+	height: 28px;
+	background-color:#eee ;
+}
+/*#article .news_marketing summary{
+	width: 123px;
+}*/
+
+/*工程案例，案例内容样式*/
+#article .works{
+	width:780px;
+	height: auto;
+	margin: 20px 0 0 20px;
+}
+#article .works ul{
+	list-style: none;
+}
+#article .works ul li{
+	width: 257px;
+	display: inline-block;
+	border:1px solid #D6D6D6;
+	padding: 3px 3px;
+	margin-bottom:15px ;	
+}
+#article .works img{
+	width:249px;
+	height:190px;
+}
+#article .works .works_name,.info{
+	font-size: 13px;
+	line-height: 23px;	
+	padding-left: 3px;
+}
+#article .works .works_name{
+	font-weight: 600;
+}
+#article .works .info{	
+	color: #777777;
+}
+#article .works .info .date{
+	color: #4FACCB;
+}
+#article .works .info .num{
+	color:#FF0000;
+}
+
+/*工程案例-案例展示页面样式*/
+#article .works_show{
+	width:780px;
+	height: auto;
+	margin: 20px 0px 20px 20px;
+	text-align: center;
+}
+#article .works_show h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 5px 0 0px 15px;
+	text-align: left;
+}
+#article .works_show ul{
+	list-style: none;
+	padding:2px 15px 10px 15px ;
+	text-align: left;
+}
+#article .works_show ul li{
+	padding:5px 0px 0px 1px ; 
+}
+#article .works_show ul li:before{
+	content: url(../img/star_red.gif);  /*列表项内容前插入图片*/
+	margin-right: 1px;
+}
+#article .works_show .tp-small{   /*设置小图的样式*/
+				width:111px;
+				height:70px;
+			}
+	
+/*设置小图的样式*/			
+#article .works_show a:link,a:visited{  /*超链接图片的样式*/
+				opacity:0.7;            /*图片透明度0.7*/
+			}
+#article .works_show a:hover{        /*鼠标悬浮时超链接图片的样式*/
+				opacity: 1;          /*图片透明度1.0*/
+			}			
+			
+#article .works_show  p{	           
+				display:none ;    /*隐藏不显示*/
+			}
+#article .works_show .tp-big{    /*设置大图的样式*/
+				width:460px;
+				height:270px;
+			}
+#article .works_show :target{display:block;}/* 链接到的内容显示 */

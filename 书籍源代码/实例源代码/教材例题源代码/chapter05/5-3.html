@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>超链接按钮设计</title>
+		<style>
+			 a{                /*超链接的样式*/ 	
+			 	display: block;			 
+				width:75px;
+				height: 26px;
+				background-color: #494949;
+				font-size:13px;
+				color:#FFF ;
+				text-decoration: none;
+				text-align: center;
+				margin-top: 15px;   
+				line-height:26px ;
+			}
+			a:after{                              /*在超链接后插入内容*/
+				content: url(img/triangle-icon-white.png);    /*插入图片*/
+				padding-left: 5px;                            /*左内边距5px*/
+				}
+		</style>
+	</head>
+	<body>
+		<a href="#">详细信息</a>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>文件的保存</title>  
+<script >
+function draw(id)
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d'); 
+    context.fillStyle = "rgb(0, 0, 255)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "rgb(0, 255, 0)";
+    context.fillRect(10, 20, 50, 50); 
+    window.location =canvas.toDataURL("image/jpeg"); 	
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

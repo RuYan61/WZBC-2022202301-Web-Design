@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>novalidate属性的使用</title>
+<link href="Css/css1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<form id="frmTmp" novalidate>
+ 		<fieldset>
+   			<legend>用户登录</legend>
+   			<p>姓名:
+   				<input name="UserName" id="UserName" type="text" class="inputtxt"  pattern="^[a-zA-Z]\w{3,5}$" required /> * 
+   			</p>
+   			<p>密码:
+   				<input name="PassWord" id="PassWord" type="password" class="inputtxt"  pattern="^[a-zA-Z]\w{3,5}$" required /> * 
+   			</p>
+   			<p class="p_center">
+   				<input name="Submit" type="submit" class="inputbtn" value="登录" />
+   				<input name="Reset" type="reset" class="inputbtn" value="取消" />
+   			</p>
+ 		</fieldset>
+	</form>
+</body>
+</html>

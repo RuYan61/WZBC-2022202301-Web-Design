@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册表单</title>
+<LINK media=all href="reset.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	FONT-SIZE: 12px; BACKGROUND: #fff; COLOR: #000; LINE-HEIGHT: 1.25; FONT-FAMILY: "Times New Roman", Times, serif; TEXT-ALIGN: center
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 2em
+}
+FORM {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: #9cbc2c; PADDING-BOTTOM: 4px; MARGIN: 0px auto; WIDTH: 500px; PADDING-TOP: 4px; border-radius: 5px; moz-border-radius: 5px; webkit-border-radius: 5px; khtml-border-radius: 5px; moz-box-shadow: 0 0 4px rgba(0,0,0,0.4); webkit-box-shadow: 0 0 4px rgba(0,0,0,0.4); box-shadow: 0 0 4px rgba(0,0,0,0.4)
+}
+FIELDSET {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-TOP-STYLE: none; PADDING-TOP: 10px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#regForm OL LI {
+	CLEAR: both; BORDER-RIGHT: #f7f7f7 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #f7f7f7 1px solid; PADDING-LEFT: 10px; BACKGROUND: white; MARGIN-BOTTOM: 12px; PADDING-BOTTOM: 5px; BORDER-LEFT: #f7f7f7 1px solid; LINE-HEIGHT: 30px; PADDING-TOP: 5px; BORDER-BOTTOM: #f7f7f7 1px solid; POSITION: relative; border-radius: 5px; moz-border-radius: 5px; webkit-border-radius: 5px; khtml-border-radius: 5px
+}
+UNKNOWN {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; FONT: italic 13px Georgia,"Times New Roman",Times,serif; BORDER-LEFT: #999 1px solid; WIDTH: 200px; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid; border-radius: 3px; moz-border-radius: 3px
+	background:#fff; webkit-border-radius: 3px; khtml-border-radius: 3px; outline: medium none
+}
+#regForm OL LI:hover {
+	BORDER-LEFT-COLOR: #9cbc2c; BACKGROUND: #f7f7f7; BORDER-BOTTOM-COLOR: #9cbc2c; BORDER-TOP-COLOR: #9cbc2c; BORDER-RIGHT-COLOR: #9cbc2c
+}
+#regForm LABEL {
+	FLOAT: left; FONT: italic 13px/30px Georgia,"Times New Roman",Times,serif; WIDTH: 120px
+}
+#regForm BUTTON {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #384313; PADDING-BOTTOM: 4px; MARGIN: auto; FONT: 14px Georgia, "Times New Roman", Times, serif; COLOR: #ffffff; BORDER-TOP-STYLE: none; PADDING-TOP: 4px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LETTER-SPACING: 1px; BORDER-BOTTOM-STYLE: none; border-radius: 14px; moz-border-radius: 14px; webkit-border-radius: 14px; khtml-border-radius: 14px; text-shadow: 0 1px 1px #000000
+}
+#agev {
+	LEFT: 430px; POSITION: absolute
+}
+</STYLE>
+</head>
+<body>
+<h1>注册表单</h1>
+<form id=regForm onsubmit="return chkForm();" method=post>
+<fieldset>
+<ol>
+  <li><label for=username>用户昵称：</label><input id=username name=username 
+  autofocus required> 
+  <li><label for=uemail>Email：</label><input id=uemail type=email name=uemail 
+  required placeholder="example@domain.com"> 
+  <li><label for=age>工作年龄：</label><input id=age type=range  name=range1 max="60" min="18"><output onforminput="value=range1.value">30</output>
+  <li><label for=age2>年龄:</label><input id=age2 type=number required 
+  placeholder="your age"> 
+  <li><label for=birthday>出生日期：</label><input id=birthday type=date> 
+  <li><label for=search>个人主页：</label><input id=search type=url 
+  required list="searchlist"> 
+  <datalist id=searchlist>
+  <option label="Google" value="http://www.google.com" />
+  <option label="Yahoo" value="http://www.yahoo.com" />
+  <option label="Bing" value="http://www.bing.com" />
+  <option label="Baidu" value="http://www.baidu.com" />
+  </datalist></li>
+</ol>
+</fieldset>
+<div><button type=submit>注册</button> </div></form>
+</body>
+</html>

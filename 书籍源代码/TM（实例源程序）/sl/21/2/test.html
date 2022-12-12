@@ -1,0 +1,118 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body id="main_body">     
+
+<div id="form_container">    
+    <h1><a>Untitled Form</a></h1>    
+    <form id="main" class="appnitro"  method="post" action="">    
+        <div class="form_description">    
+            <h2 id="title"></h2>    
+        </div>                           
+        <ul >    
+            <li id="li_2" >    
+                <label class="description" for="element_2">X </label>    
+                <div>    
+                    <input id="x" name="x" class="element text medium" type="text" maxlength="255" value="3"/>    
+                </div>    
+            </li>   
+            <li id="li_3" >    
+                <label class="description" for="element_3">Y </label>    
+                <div>    
+                    <input id="y" name="y" class="element text medium" type="text" maxlength="255" value="3"/>    
+                </div>    
+            </li>           
+            <li id="li_1" >    
+                <label class="description" for="element_1">Messages </label>    
+                <div>    
+                    <textarea id="output" name="output" class="element textarea medium"></textarea>    
+                </div>    
+            </li>    
+            <li class="buttons">    
+                <input type="hidden" name="form_id" value="87137" />    
+                <input id="addButton" class="button_text" type="button" value="Add" />    
+                <input id="multButton" class="button_text" type="button"  value="Multiply" />    
+                <input id="killButton" class="button_text" type="button" value="Stop Worker" />    
+                <input id="clearBtn" class="button_text" type="button" value="Clear" />    
+            </li>    
+        </ul>    
+    </form>       
+    <div id="footer"></div>    
+</div>    
+ 
+   
+<script type='text/javascript'>    
+    !(function() {   
+         
+        
+        var getWebWorkerSupport = function() {   
+            return (typeof(Worker) !== "undefined") ? true:false;   
+        }   
+        
+       var getElem = function(id) {   
+           return typeof id === 'string' ? document.getElementById(id) : id;   
+       }   
+       
+       var worker,   
+           isSupport = getWebWorkerSupport();   
+       
+       
+       if (isSupport) {   
+              
+           var createWorker = function() {   
+               if (worker) {   
+                   return ;   
+               }   
+       
+               worker = new Worker("worker.js");   
+               worker.onmessage = function(evt) {   
+                   getElem("output").value += evt.data + '\n';   
+               }   
+               worker.onerror = function(evt) {   
+                   getElem("output").value += "\n在第["+ evt.lineno +"]行发生错误: " + evt.message;   
+               }   
+           }   
+       
+           getElem("multButton").onclick = function() {   
+               createWorker();   
+      
+               var x = document.getElementById("x").value;   
+               var y = parseFloat(document.getElementById("y").value);   
+       
+              var str = "mult_" + x + "_" + y;   
+                  
+               worker.postMessage(str);   
+           }   
+             
+           getElem("addButton").onclick = function() {   
+               createWorker();   
+       
+               var x = document.getElementById("x").value;   
+              var y = parseFloat(document.getElementById("y").value);   
+       
+               var str = "add_" + x + "_" + y;   
+              worker.postMessage(str);   
+           }   
+       
+           getElem("killButton").onclick = function() {   
+               if (worker) {   
+                 worker.terminate();   
+                   worker = null;   
+               }   
+           }   
+      } else {   
+          getElem("multButton").disabled = getElem("addButton").disabled = getElem("killButton").disabled = true;   
+       }   
+      
+       getElem("title").innerHTML = "您当前使用的浏览器"+(isSupport ? "支持" : "<em class='error'>不支持</em>")+"Web Worker";   
+       
+       getElem("clearBtn").onclick = function() {   
+           getElem("output").value = "";   
+       }   
+   })();   
+</script>   
+</body>
+</html>

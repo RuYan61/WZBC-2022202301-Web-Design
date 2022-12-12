@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本阴影</title>
+		<style>	
+			p{margin: 10px;}		
+			.f1{
+				font-family: "微软雅黑";
+				font-size: 60px;
+				color: #eee;
+				text-shadow: 2px 2px 1px #222,-2px -2px 1px #222,2px -2px 1px #222,-2px 2px 1px #222; /*四重投影，分别是右下、左上、右上、左下四个方向投影*/
+			}
+			.f2{
+			font-family: "微软雅黑";
+			font-size: 60px;
+			color: #222;
+			text-shadow: 5px 3px 1px #555;/*水平向右5px,垂直向下3px,模糊1px,浅黑色投影*/
+			}
+		</style>
+	</head>
+	<body>
+		<p class="f1">
+		   好好学习
+		</p>
+		<p class="f2">
+		   好好学习
+		</p>
+	</body>
+</html>

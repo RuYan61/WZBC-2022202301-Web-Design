@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>   
+<html>   
+<head>   
+<meta charset="utf-8" />   
+<title>使用openDatabase创建数据库</title>  
+<script type="text/javascript">
+function $$(id){  
+  	return document.getElementById(id);
+}
+var db;
+//单击“创建数据库”按扭时调用
+function CreateDb_Click(){    
+	db=openDatabase('mydb','1.0','my database',2*1024*1024,
+	function(){        
+		$$("pStatus").style.display="block";        
+		$$("pStatus").innerHTML="数据库创建成功！";     
+	});
+}
+//单击“测试连接”按扭时调用
+function TestConn_Click(){    
+	if(db){       
+		$$("pStatus").style.display="block";       
+		$$("pStatus").innerHTML="数据库连接成功!";    
+	}
+}
+</script>
+</head>   
+<body>
+<input id="CreateDb" type="button" value="创建数据库" class="inputbtn" onClick="CreateDb_Click();">
+<input id="TestConn" type="button" value="测试连接" class="inputbtn" onClick="TestConn_Click();">   
+<p id="pStatus"></p>
+</body>   
+</html>

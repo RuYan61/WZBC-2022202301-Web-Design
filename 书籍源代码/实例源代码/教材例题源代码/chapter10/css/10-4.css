@@ -1,0 +1,81 @@
+	*{                                  /*针对所有的HTML元素定义样式*/
+	    margin:0;                       /*外边距为0px*/ 
+		padding:0;                       /*内边距为0px*/ 
+		box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+		}
+	
+	a{                                  /*设置超链接的样式*/
+		text-decoration: none;          /*无修饰*/
+		}
+	/*热销产品样式开始*/
+	#hotproduct{
+		width:1050px;
+		height:auto;	
+		}
+	#hotproduct ul{                         /*设置热销产品列表的样式*/
+		list-style: none;                   /*不显示项目符号*/	
+		width:1050px;
+		height:158px;
+		padding:6px 0 0px 4px;             /*上、右、下、左的内边距依次为6px,0px,0px,4px*/
+		border:2px solid #DDDDDD;          /*热销产品区边框为2px的灰色实线*/ 
+		}
+	#hotproduct ul li{	                   /*设置热销产品列表项的样式*/     	
+		width:160px;	
+		display: inline-block;            /*内联元素*/
+		float: left;                      /*向左浮动 */    
+		margin-right:10px;                /*右外边距10px*/
+		margin-bottom: 1px;               /*下外边距1px*/
+		position: relative;               /*相对定位*/
+		-webkit-perspective:250px;	      /*透视效果：子元素与镜头的距离为250px*/  
+		}			
+	#hotproduct ul li.evenlist {	     /*设置热销产品列表项中偶数项的样式*/ 
+		width:80px;
+		height:148px;
+		border-right: 1px solid #ddd;      /*右边框为1px的灰色实线*/
+		}	
+	#hotproduct ul li.lastlist{	           /*设置热销产品列表项中最后一项的样式*/ 
+		width:80px;
+		height:148px;
+		border-right: 0px;                  /*不设置右边框*/
+		} 
+	#hotproduct ul li img{                   /*设置热销产品列表项中图像的样式*/ 
+		width:160px;
+		height: 141px;		
+		position: absolute;                 /*绝对定位*/
+		left:0;                             /*离左侧0px*/
+		top:0;                              /*离顶部0px*/  
+		-webkit-backface-visibility:hidden; /*元素背面不可见*/
+		transition:all 0.5s ease-in 0s;     /*0.5秒完成动画*/
+	    }
+				
+	#hotproduct ul li img.fan{               /*设置图片的样式*/
+		-webkit-transform:rotateX(-180deg);  /*图像沿X轴3D旋转-180度*/
+		 }
+	#hotproduct ul li:hover img.fan{         /*设置鼠标悬停在图片上时样式*/
+		-webkit-transform:rotateX(0deg);    /*图像沿X轴3D旋转0度*/
+		}
+	#hotproduct ul li:hover img.zheng{
+		-webkit-transform:rotateX(180deg);
+		}
+				
+	#hotproduct strong{	         /*定义strong样式*/
+		display: block;          /*块级元素*/
+		margin:10px 0 0 0;        /*上、右、下、左的内边距依次为10px,0px,0px,0px*/
+		}
+	#hotproduct a{                /*设置热销产品区中超链接的样式*/     
+		display: inline-block;     
+		width:75px;
+		height: 26px;
+		background-color: #494949;
+		font-size:13px;
+		color:#FFF ;
+		text-decoration: none;
+		text-align: center;
+		margin-top: 15px;   
+		line-height:26px ;
+		}
+	#hotproduct a:after{                              /*在超链接后插入内容*/
+		content: url(../img/triangle-icon-white.png);    /*插入图片*/
+		padding-left: 5px;                            /*左内边距5px*/
+		}
+	/*热销产品样式结束*/	

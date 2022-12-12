@@ -1,0 +1,20 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>svg中的径向渐变</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="220">
+    <defs>
+        <radialGradient id="g1"cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+            <stop offset="80%" stop-color="rgb(255,128,192)" stop-opacity="1"/>
+            <stop offset="100%" stop-color="rgb(252,239,169)" stop-opacity="1"/>
+        </radialGradient>
+    </defs>
+    <circle cx="120" cy="120" r="100" fill="url(#g1)"/>
+</svg>
+</body>
+</html>

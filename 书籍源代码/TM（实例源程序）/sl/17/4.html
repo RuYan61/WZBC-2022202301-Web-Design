@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>canvas元素示例</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "#EEEEFF";  
+    context.fillRect(0, 0, 300, 300);  
+  
+  	context.beginPath();
+  	context.strokeStyle = '#c00';
+  	context.lineWidth = 3;
+	context.arc(100, 50, 30, 0, Math.PI*2, true); 
+  	context.fill();
+  	context.stroke();
+
+  	context.beginPath();
+  	context.strokeStyle = '#c00';
+  	context.lineWidth = 3;
+  	context.arc(100, 50, 20, 0, Math.PI, false);
+  	context.fill();
+  	context.stroke();
+
+  	context.beginPath();
+  	context.fillStyle = '#c00';
+ 	context.arc(90, 45, 3, 0, Math.PI*2, true);
+ 	context.fill();
+	context.stroke(); 
+ 	context.moveTo(113, 45);
+ 	context.arc(110, 45, 3, 0, Math.PI*2, true);
+ 	context.fill();
+ 	context.stroke(); 
+
+ 	context.beginPath();
+ 	context.moveTo(100, 80); // move to neck
+ 	context.lineTo(100, 180); // body
+	context.lineTo(75, 250); // 绘制左腿
+	context.moveTo(100, 180); // move to hips
+	context.lineTo(125, 250); // 绘制右腿
+	context.moveTo(100, 90); // move to shoulders
+	context.lineTo(75, 140); // 绘制左胳膊
+	context.moveTo(100, 90); // back to shoulders
+	context.lineTo(125, 140); // 绘制右胳膊
+	context.stroke();
+}
+    context.closePath();  
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>canvas中绘制火柴人</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

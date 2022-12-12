@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>客户案例</title>
+		<style>
+			*{padding: 0;margin: 0;}
+			.imgbox{     /*客户案例的盒子样式*/
+				width:325px;
+				height:200px;
+				position: relative;
+			    overflow: hidden;
+			}
+			.imgbox img{      /*客户案例的图片样式*/
+				width:325px;
+				height:200px;
+			}
+			.imgbox hgroup{   /*客户案例的盒子中，文本样式*/
+				padding-top: 20px;
+				text-align: center;
+				position: absolute;
+				left:0;
+				top:-220px;
+				width:325px;
+				height:200px;
+				background: rgba(0,0,0,0.5);
+				transition:all 0.5s ease-in 0s;   /*过度效果*/
+			}
+			h3{                          /*h3标题的样式*/                   
+				font-size:16px;
+				color: #BBB;      	/*文字颜色为浅灰色*/
+				font-weight: 500;       /*文字粗细500*/
+				margin-top: 15px;
+			}
+			div.imgbox:hover  hgroup{  /*鼠标指向时，文本下滑*/
+				position: absolute;
+				left:0;
+				top:0;	
+			}
+		</style>
+	</head>
+	<body>
+		<div class="imgbox">
+		   <img src="img/led_jgd9.jpg" />
+			<hgroup>			    	
+			    <h3>日照水运基地</h3>
+			    <h3>日照奥林匹克水上公园</h3>
+			    <h3>日照水上运动中心夜景亮化</h3>
+		   </hgroup>
+		</div>
+	</body>
+</html>

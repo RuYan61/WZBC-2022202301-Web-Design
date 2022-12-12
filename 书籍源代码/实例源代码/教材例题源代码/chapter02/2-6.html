@@ -1,0 +1,203 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>二、HTML5中常用的交互元素</title>
+
+<script type="text/javascript">
+	function command_click(){
+	document.getElementById("show").innerHTML=
+
+			"点击了打开command·";
+
+	}
+
+    var intVal = 0;
+var intTimer;
+
+var objpro = document.getElementById('objpro');
+
+var title = document.getElementById('mytitle');
+	function interval_handler(){
+	intVal++;
+	objpro.value = intVal;
+	if(intVal >= objpro.max){
+		clearInterval(intTimer);
+
+			title.innerHTML = "下载完成";
+
+		}else{
+
+			title.innerHTML = "正在下载"+intVal+"%";
+
+
+		}}
+
+
+	function btn_click(){
+
+intTimer = setInterval(interval_handler,100);
+
+
+	}
+
+  </script>
+
+<menu>
+
+	<command onclick="command_click();">
+
+		打开	
+
+	</command>
+
+  </menu>
+
+
+  <div id="show"></div>
+
+
+</head>
+
+
+<body>
+
+
+
+<form>
+
+
+      <input id="myCar" list="cars" >
+
+
+	    <datalist id="cars">
+
+
+		  <option value="BMW">
+
+		  <option value="Ford">
+	  <option value="Volvo">
+
+	    </datalist>
+
+
+      </input>
+
+
+      <hr><hr>
+  
+   <span>显示内容</span>
+
+      <details id="detail" open="open">
+
+
+	       我被显示出来了
+
+
+      </details>
+
+
+      <hr><hr>
+
+
+      <details>
+
+	    <summary>HTML 5</summary>
+
+	      欢迎使用 summary 标签
+
+	  </details>
+
+
+      <hr><hr>
+
+
+    </form>
+
+
+     <menu>
+
+        <li>
+       <img src="Chrome.png">
+        <span>Chrome浏览器</span>
+
+        </li>
+
+
+        <li>
+
+            <img src="360.png">
+
+
+            <span>360浏览器</span>
+
+
+        </li>
+
+        <li>
+
+            <img src="IE.png">
+
+
+            <span>IE浏览器</span>
+
+
+        </li>
+
+      </menu>
+
+      <hr><hr>
+
+      <menu>
+
+   <command 
+
+	onclick="alert('command click');">
+
+	    Click Me!
+
+	    </command>
+
+      </menu>
+    <hr><hr>
+
+	  <p id="mytitle">开始下载</p>
+
+  <progress value="0" max="100" id="objpro">
+
+      </progress>
+
+      <input type="button" value="下载" onclick="btn_click();">
+ <hr><hr>
+
+
+      <p>120人参与投票，明细如下：</p>
+
+      <p>张三:
+
+      <meter value="0.3" optimum="1" high="0.9" low="1" max="1" min="0"></meter>
+
+      <span>30%</span>
+
+      </p>
+
+      <p>李四:
+
+
+      <meter value="70" optimum="100" high="90" low="10" 	max="100" min="0"></meter>
+
+      <span>70%</span>
+
+      </p>
+
+	  <hr><hr>
+
+
+</body>
+
+</html>
+

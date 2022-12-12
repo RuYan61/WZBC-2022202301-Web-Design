@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg绘制路径</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300">
+    <!--M200,30 为起点-->
+    <!--Q200 10,190 10绘制第一段贝塞尔曲线-->
+    <!--Q60,10 65,30绘制第二段贝塞尔曲线-->
+    <!--Q65,65 85,62 绘制第三段贝塞尔曲线-->
+    <!--Q200,62 200,45 绘制第四段贝塞尔曲线-->
+    <path d="M200,30L200,20Q200 10,190 10 L80 10
+    Q60,10 65,30 L65,45Q65,65,85,62L185,62Q200,62 200,45L 210,38Z"
+          fill="RGB(158,234,106)" stroke-width="3"/>
+</svg>
+</body>
+</html>

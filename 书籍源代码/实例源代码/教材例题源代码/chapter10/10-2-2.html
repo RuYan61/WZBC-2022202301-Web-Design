@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transform:scale()</title>
+		<style type="text/css">	
+			div{
+				width:100px;
+				height:80px;	
+				border: 1px solid #333;			
+			}		
+			img{ 
+				width:90px;
+				height:70px;				
+				margin: 1px;
+				}
+			img:hover{
+				transform:translate(130px,10px) scale(1.5,1);    /*元素平移并沿X轴放大1.5倍*/
+				-webkit-transform:translate(130px,10px) scale(1.5,1); /*Safari and Chrome 浏览器兼容代码*/
+				-moz-transform:translate(130px,10px) scale(1.5,1);    /*Firefox浏览器兼容代码*/
+				-o-transform:translate(130px,10px) scale(1.5,1);     /*Opera浏览器兼容代码*/
+				transition-duration: 3s;	            /*过渡效果持续3秒*/
+				-webkit-transition-duration: 3s;
+				-moz-transition-duration: 3s;
+				-o-transition-duration: 3s;						
+			  }
+       </style>
+	</head>
+	<body>
+		<div><img src="img/pic2.jpg"> </div>
+	</body>
+</html>
+   

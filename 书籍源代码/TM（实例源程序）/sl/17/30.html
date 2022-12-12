@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>移动的小方块</title>  
+<script >
+var context;
+var width,height;
+var i;
+function draw(id)
+{
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    context = canvas.getContext('2d'); 
+  width=canvas.width;
+   height=canvas.height;
+    i=0;
+    setInterval(rotate,100);         //十分之一秒
+}
+function rotate()
+{   
+    context.clearRect(0,0,width,height);
+    context.fillStyle = "blue";
+    context.fillRect(i, 0, 20, 20);
+    i=i+20;
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

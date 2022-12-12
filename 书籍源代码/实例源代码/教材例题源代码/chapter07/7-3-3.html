@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三列布局</title>
+		<style>
+			*{margin: 0px;}
+			body{				
+			    font-family: "微软雅黑";
+			    font-size: 20px;
+			}
+			#container{		
+				width:620px;		
+				height:auto;				
+				background-color:#BBBBBB;
+				margin:0 auto;				
+			}
+			header{						
+				height:50px;
+				background-color: #4FACCB;	
+				margin-bottom: 3px;						
+			}
+			#main{			
+			height:300px;
+			background-color:#DDDDDD;
+			}
+			#main #left{
+			width:190px;
+			height:295px;
+			background-color:#90BAFF;	
+			float: left;
+			}
+			#main #center{
+			width:235px;
+			height:295px;
+			background-color:#6699FF;	
+			margin: 0 2px;
+			float: left;
+			}
+			#main #right{
+			width:190px;
+			height:295px;
+			background-color:#90BAFF;
+			float: right;
+			}
+			footer{
+				clear: both;		
+				height:50px;
+				background-color:#008000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header>此处显示  "header" 的内容</header>
+			<div id="main">
+			    <div id="left">此处显示  id= "left" 的内容</div>
+			    <div id="center">此处显示  id= "center" 的内容</div>
+			    <div id="right">此处显示  id= "right" 的内容</div>
+			</div>
+			<footer>此处显示  "footer" 的内容</footer>
+		</div>
+   </body>
+
+</html>

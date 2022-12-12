@@ -1,0 +1,43 @@
+/*导航栏样式开始*/
+*{
+	margin: 0;padding: 0;
+}
+nav {				
+	margin-bottom:5px;
+	height:36px;
+	background-image: repeating-linear-gradient(0deg,#9cf,#fff 60%,#9cf 100%); /*渐变背景*/
+    border-bottom: 1px solid #DBEAEE;
+    border-top: 1px solid #DBEAEE;
+}
+nav ul {					    /*设置菜单列表的样式*/
+	list-style-type:none; 		/*不显示项目符号*/		            
+}
+nav ul li {					/*设置菜单列表项的样式*/
+	display:inline; 		/*内联元素*/	
+	line-height:36px; 		/*行高36px*/	
+}
+nav ul li  a{
+	display:block;             /*块级元素*/
+	width:90px;
+	height:36px;			     
+	float: left;                /*向左浮动*/
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 10px 0 20px;	 	/*上、右、下、左的外边距依次为0px,10px, 0px,20px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		    /*文字居中对齐*/
+	font-family:tahoma;	
+	font-size:14px;
+	font-weight:bold; 		   /*字体加粗*/
+}
+nav ul li:nth-child(1)  a{    /*设置第一个导航菜单项“首页”的宽度为50px*/
+	width: 50px;
+	}
+	
+nav ul li a:link, nav ul li a:visited {		/*菜单项普通链接、访问过链接的样式*/
+	color:#333;				/*浅黑色文字*/
+}
+nav ul li a:active,nav ul li a:hover {			/*激活链接和悬停链接 样式*/
+	color:#FFF; 			/*白色文字*/
+	background-image: repeating-linear-gradient(0deg,#36c,#9CF 60%,#fff 100%);
+}
+/*导航栏样式结束*/

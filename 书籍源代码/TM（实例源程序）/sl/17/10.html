@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>lineWidth属性</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    for (var i = 0; i < 10; i++){
+    context.lineWidth = 1+i;
+    context.beginPath();
+	context.strokeStyle = '#c00';
+    context.moveTo(5+i*14,5);
+    context.lineTo(5+i*14,140);
+    context.stroke();
+  }
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>lineWidth 属性实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

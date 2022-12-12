@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>移动的小方块</title>  
+<script >
+var globalId;
+var i = 0;
+function draw(id)
+{
+	globalId = id;
+	setInterval(Composite,1000);
+}
+function Composite() 
+{  
+    var canvas = document.getElementById(globalId);  
+    if (canvas == null)  
+        return false;  
+    var context = canvas.getContext('2d');  
+	//定义数组
+	var arr = new Array(
+		"source-over",
+		"source-in",
+		"source-out",
+		"source-atop",
+		"destination-over",
+		"destination-in",
+		"destination-out",
+		"destination-atop",
+		"lighter",
+		"darker",
+		"xor",
+		"copy"
+	);
+	if(i>11)
+		i = 0;
+	context.fillRect(0,0,canvas.width,canvas.height);  
+	context.save();
+	//绘制原有图形
+	context.fillStyle = "#0000FF"; 
+    context.fillRect(10,10,200,200);  
+	//设置组合方式
+	context.globalCompositeOperation = arr[i];
+	//设置新图形
+	context.beginPath();
+	context.fillStyle = "#FF0000";
+	context.arc(150,150,100,0,Math.PI*2,false);
+	context.fill();
+	context.restore();
+	i++;
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

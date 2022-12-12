@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户登录界面</title>
+ <style type="text/css" media="screen">   
+            *{ margin: 0; padding: 0;}   
+            body{ font-size: 14px;}   
+            ul,li{ list-style: none; list-style-position: outside;}   
+            body{ width: 740px; margin: 0 auto;}   
+            .form_item{ min-height: 30px; margin-top: 5px;text-indent:0;}   
+            .form_item label{ display: block; line-height: 24px;}   
+            .form_item input[type="text"]{ width: 180px; height:24px; line-height: 24px;}   
+            .form_item textarea{ vertical-align: top;}   
+            .form_item input[type="submit"],input[type="button"]{ width: 80px; height:24px; line-height: 24px; border:1px solid #ff6600; border-radius:4px; background:#ff6600; outline:none; color:#fff; cursor: pointer;}   
+            .form_item input[type="submit"]{ margin-right: 50px;}   
+            .form_item input[type="submit"]:hover{ position: relative; top:1px;}   
+			.datalist{ min-height:300px; border-top: 1px solid #e4e4e4;}   
+            .datalist dt{ height: 30px; line-height: 30px; background:#e8e8e8;}   
+            .datalist dd{ min-height:30px;line-height: 24px; text-indent:2em;}   
+          
+</style>
+    </head>
+<form action="#" method="get" accept-charset="utf-8">   
+<p class="form_item">
+用户名：<input type="text" name="" value="" id="name" required/>
+</p>   
+<p class="form_item">
+密&nbsp;&nbsp;码：<input type="password" name="" value="" id="msg" required></textarea>
+</p>   
+<p class="form_item">
+<input type="submit" id="save" value="登录"/>
+<input type="submit" id="clear" value="注销"/>
+</p>  
+<hr> 
+</form> 
+   
+<script type="text/javascript" charset="utf-8">   
+    (function(){   
+        var datalist = getE('datalist');   
+        if(!datalist){   
+            datalist = document.createElement('dl');   
+            datalist.className = 'datalist';   
+            datalist.id = 'datalist';   
+            document.body.appendChild(datalist);   
+        }   
+        var result = getE('result');   
+        var db = openDatabase('myData','1.0','test database',1024*1024);   
+        showAllData()   
+           
+        db.transaction(function(tx){   
+            tx.executeSql('CREATE TABLE IF NOT EXISTS MsgData(name TEXT,msg TEXT,time INTEGER)',[]);   
+               
+        })   
+        getE('clear').onclick = function(){   
+            db.transaction(function(tx){   
+                tx.executeSql('DROP TABLE MsgData',[]);   
+            })   
+            showAllData()   
+        }   
+        getE('save').onclick = function(){   
+            saveData();   
+            return false;   
+        }   
+        function getE(ele){   
+            return document.getElementById(ele);   
+        }   
+      /*  function removeAllData(){   
+            for (var i = datalist.children.length-1; i >= 0; i--){   
+                datalist.removeChild(datalist.children[i]);   
+            }   
+        }*/   
+        function showData(row){   
+            var dt = document.createElement('dt');  
+			dt.innerHTML = row.name;
+			var dd = document.createElement('dd');   
+            dd.innerHTML = row.msg; 
+			var tt = document.createElement('tt'); 
+			var t = new Date();
+			t.setTime(row.time);
+			tt.innerHTML =t.toLocaleDateString()+" "+ t.toLocaleTimeString();  
+            datalist.appendChild(dt);   
+            datalist.appendChild(dd); 
+			datalist.appendChild(tt);  
+        }   
+        function showAllData()
+		{   
+
+            db.transaction(function(tx)
+			{   
+                tx.executeSql('CREATE TABLE IF NOT EXISTS MsgData(name TEXT,msg TEXT,time INTEGER)',[]);   
+                tx.executeSql('SELECT * FROM MsgData',[],function(tx,result){   
+                    removeAllData();   
+                    for(var i=0; i < result.rows.length; i++){   
+                        showData(result.rows.item(i));   
+                    }   
+                });   
+            });   
+        }   
+        function addData(name,msg,time)
+		{   
+            db.transaction(function(tx)
+			{   
+                tx.executeSql('INSERT INTO MsgData VALUES(?,?,?)',[name,msg,time],function(tx,result)
+				{  
+				alert("登录成功");   
+                },
+				function(tx,error)
+				{   
+                    alert(error.source + ':' + error.message);   
+                });   
+            });   
+        }   
+        function saveData()
+		{   
+            var name =getE('name').value;   
+            var msg = getE('msg').value;   
+            var time = new Date().getTime();   
+            addData(name,msg,time);   
+            showAllData();   
+        }   
+    })();  
+	 </script>  
+</body>
+</html>  

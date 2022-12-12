@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>通过timeupdate事件动态显示媒体文件播放时间</title>
+<link href="../Css/css1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="jscript" src="../Js/js4.js">
+</script>
+</head>
+<body>
+<div>
+  <video id="vdoMain" src="../2.ogv"
+         width="360px" height="220px" controls="true" 
+         onMouseOut="v_move(0)" onMouseOver="v_move(1)"
+         onPlaying="v_palying()" onPause="v_pause()"
+         onLoadStart="v_loadstart();"
+         onEnded="v_ended();"
+         onTimeUpdate="v_timeupdate(this)"
+         poster="../1.jpg">
+         你的浏览器不支持视频
+  </video>
+  <p id="pTip">
+     <span id="spnPlayTip" class="spnL"></span>
+	<span id="spnTimeTip" class="spnR"></span>
+  </p>
+</div>
+</body>
+</html>

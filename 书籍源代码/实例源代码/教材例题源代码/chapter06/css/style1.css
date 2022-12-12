@@ -1,0 +1,49 @@
+*{                                  /*针对所有的HTML元素定义样式*/
+	margin:0;                       /*外边距为0px*/ 
+    padding:0;                       /*内边距为0px*/ 
+    box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+
+body{					/*设置页面整体样式*/
+	width:1050px;            /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为12px*/
+	color:#444444;			/*文字颜色为灰色*/
+}
+/*网页头部的CSS样式开始*/
+header {
+	height:250px;              /*高度250px*/
+	background-color:#FFFFEE ;  /*背景颜色*/
+	background-image:url(../img/banner.jpg);  /*背景图片*/
+	background-repeat: no-repeat;             /*背景图片不平铺*/
+	background-position: center 50px;         /*背景图片位置，左右居中，离顶部50px*/
+}
+/*网页头部的CSS样式结束*/
+
+/*导航栏样式开始*/
+nav {				
+	margin-bottom:5px;
+	text-align: center;
+	width:1050px;
+	height:36px;
+	background-image: repeating-linear-gradient(0deg,#9cf,#fff 60%,#9cf 100%);
+    border-bottom: 1px solid #DBEAEE;
+    border-top: 1px solid #DBEAEE;
+}
+
+a{
+	display:block;             /*块级元素*/
+	width:90px;
+	height:36px;			     
+	float: left;                /*向左浮动*/
+	padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为0px,8px, 0px,8px*/
+	margin:0 10px 0 20px;	 	/*上、右、下、左的外边距依次为0px,10px, 0px,20px*/
+	text-decoration:none; 		/*链接无修饰*/
+	text-align:center; 		    /*文字居中对齐*/
+	font-family:tahoma;	
+	font-size:14px;
+	font-weight:bold; 		   /*字体加粗*/
+	line-height: 36px;
+	color: #333;
+}

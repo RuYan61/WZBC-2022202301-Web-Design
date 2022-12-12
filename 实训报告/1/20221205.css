@@ -1,0 +1,59 @@
+ body{                    
+ 	font-size:13px; 
+ 	font-family:"微软雅黑";
+ 	color: #000;
+ 	}                  
+ body,form,input,h1,p{    
+ 	padding:0; 
+ 	margin:0; 
+ 	border:0; 
+ 	}  
+ 	        
+#bg{	
+	width:100%;
+	height:750px;	
+	background:linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0) 30%,rgba(255,255,255,1)),url(../img/register_bg.jpg);/*渐变背景*/
+	background-size:cover;   	
+	position: relative;     
+	}
+form{
+	width:450px; 
+	height:600px; 
+	position:absolute;                  
+	right:8%;
+	top:4%;
+    }
+h2{  
+	width:400px;                           /*控制标题*/
+	text-align:center;
+	margin:25px 0; 
+	font-weight: 600;
+    }     
+p{margin-top:20px;}
+
+p span{
+	width:75px; 
+	display:inline-block;                
+	text-align:right;                    
+	padding-right:10px;                   
+    }
+p input{
+	width:200px;                                      
+    height:18px;                                 
+    border:1px solid #d4cdba;
+    padding:2px;                          
+    }
+
+.btn input{                                
+	width:70px; 
+	height:25px;
+	border: 1px solid #AAA;
+    background:#DDD;               
+    margin-top:15px; 
+    margin-left:80px; 
+    border-radius:3px;             
+    font-size:13px;
+    font-family:"微软雅黑";
+    color:#111;                
+    }		
+

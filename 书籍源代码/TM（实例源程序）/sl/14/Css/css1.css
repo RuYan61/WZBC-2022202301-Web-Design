@@ -1,0 +1,53 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	font-size:12px
+}
+.inputbtn {
+	border:solid 1px #ccc;
+	background-color:#eee;
+	line-height:18px;
+	font-size:12px
+}
+.inputtxt {   
+	border:solid 1px #ccc;
+	padding:3px;
+	line-height:18px;
+	font-size:12px;
+	width:160px
+}
+fieldset{
+	padding:10px;
+	width:280px;
+	float:left
+}
+/* 实例4增加样式 */
+#spnColor{
+	width:150px;
+	float:left
+}
+#spnPrev{
+	width:100px;
+	height:70px;
+	border:solid 1px #ccc;
+	float:right
+}
+#pColor{
+	font-weight:bold; 
+	clear:both;
+	text-align:center
+}
+/* 实例6增加样式 */
+p{
+	clear:both;
+	padding:0px;
+                   margin:8px;
+}
+/* 实例10增加样式 */
+.p_center{
+	text-align:center
+}
+/* 实例11增加样式 */
+.p_color{
+	color:#666
+}

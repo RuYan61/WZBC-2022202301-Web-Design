@@ -1,0 +1,18 @@
+
+
+ .about{
+	width:780px;
+	height: auto;
+	margin: 20px 0 20px 20px;
+}
+ .about img{
+	width:780px;
+}
+ .about p{
+    font-family:Tahoma;
+    color:#444;	
+	font-size: 13px;	
+	line-height: 24px;
+	text-indent:2em ;  /*首行缩进2个汉字*/
+	margin: 5px;
+}

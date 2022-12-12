@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3D旋转变形</title>
+<style type="text/css">
+div.pk{
+    width:162px;
+    height: 232px;
+    border: 1px solid #000;
+    position: relative;
+    -webkit-perspective:300px;  /*定义 3D 元素距视图的距离*/
+}
+div.pk img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility:hidden;  /*定义元素在不面对屏幕时不可见*/
+    transition:all 1s ease 0s;          /*定义过渡效果*/
+}
+div.pk img.pk1{
+    -webkit-transform:rotateY(-180deg);  /*围绕Y轴旋转-180度*/
+}
+div.pk:hover img.pk1{
+    -webkit-transform:rotateY(0deg);
+}
+div.pk:hover img.pk2{
+    -webkit-transform:rotateY(180deg);
+}
+</style>
+</head>
+<body>
+	<div class="pk">
+		<img class="pk1" src="img/puke1.jpg"/>
+		<img class="pk2" src="img/puke2.jpg"/>
+	</div>	
+</body>
+</html>          

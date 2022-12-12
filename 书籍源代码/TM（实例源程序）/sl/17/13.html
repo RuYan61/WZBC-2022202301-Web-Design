@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html> 
+<html>  
+<head>   
+<meta charset="UTF-8">  
+<title>绘制线性渐变</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    var lingrad = context.createLinearGradient(0,0,0,150);
+  		lingrad.addColorStop(0, 'black');
+  		lingrad.addColorStop(1, 'white');
+  		context.fillStyle = lingrad;
+  		context.fillRect(10,10,130,130);
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>绘制线性渐变</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

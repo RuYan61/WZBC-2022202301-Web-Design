@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transform:rotate()</title>
+		<style>	
+			div{
+				width:350px;
+				height: 350px;
+				border: 1px solid #888888;
+			}	
+			img{
+				width:150px;
+				height:150px;
+				margin:100px;		
+			}
+			img:hover{
+				transform: rotate(180deg) scale(2,2);  /*顺时针旋转180度，放大2倍*/
+			    -webkit-transform:rotate(180deg) scale(2,2); /*Safari and Chrome 浏览器兼容代码*/
+				-moz-transform:rotate(180deg) scale(2,2);    /*Firefox浏览器兼容代码*/
+				-o-transform:rotate(180deg)  scale(2,2);     /*Opera浏览器兼容代码*/
+				transition-duration: 3s;    /*过渡效果持续3秒*/
+				-webkit-transition-duration: 3s;
+				-moz-transition-duration: 3s;
+				-o-transition-duration: 3s;		
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/风车.jpg">
+		</div>
+	</body>
+</html>
+ 

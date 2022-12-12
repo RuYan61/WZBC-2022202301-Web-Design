@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>globalAlpha 属性</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    context.fillStyle = '#FD0';
+    context.fillRect(0,0,75,75);
+    context.fillStyle = '#6C0';
+    context.fillRect(75,0,75,75);
+    context.fillStyle = '#09F';
+    context.fillRect(0,75,75,75);
+    context.fillStyle = '#F30';
+    context.fillRect(75,75,75,75);
+    context.fillStyle = '#FFF';
+    context.globalAlpha = 0.3;
+for (var i=0;i<7;i++){
+      context.beginPath();
+      context.arc(75,75,10+10*i,0,Math.PI*2,true);
+      context.fill();
+  }
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>globalAlpha 属性实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

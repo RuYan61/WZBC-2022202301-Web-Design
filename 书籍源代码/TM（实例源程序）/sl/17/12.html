@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>lineJoin属性</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    var lineJoin = ['round','bevel','miter'];
+		context.strokeStyle = '#09f';
+  		context.lineWidth = 10;
+  for (var i=0;i<lineJoin.length;i++){
+    	context.lineJoin = lineJoin[i];
+    	context.beginPath();
+    	context.moveTo(-5,5+i*40);
+    	context.lineTo(35,45+i*40);
+    	context.lineTo(75,5+i*40);
+   		context.lineTo(115,45+i*40);
+    	context.lineTo(155,5+i*40);
+    	context.stroke();
+  }
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>lineJoin属性实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

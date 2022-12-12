@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>跨文档传输数据</title>
+<link href="../Css/css1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="jscript" src="../Js/js1.js">
+</script>
+</head>
+<body onLoad="pageload();"> 
+  <fieldset>   
+    <legend>跨文档传输数据</legend>   
+    <p id="pStatus"></p>   
+    <input id="txtNum" type="text" class="inputtxt">
+    <input id="btnAdd" type="button" value="请求" class="inputbtn" onClick="btnSend_Click();">
+	<iframe id="ifrA" src="message.html" width="0px" height="0px" frameborder="0"/>
+  </fieldset>
+</body>
+</html>

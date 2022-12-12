@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图像边框设置</title>
+		<style>
+			.img1{
+				width:130px;   /*绝对宽度130px*/
+				height:200px ; /*绝对高度200px*/	
+				border-style: dotted;  /*点画线边框*/
+				border-width: 2px;     /*边框粗细2px*/
+				border-color: #FF0000; /*边框颜色*/		
+			}
+			.img2{
+			    width:130px;   /*绝对宽度130px*/
+				height:200px ; /*绝对高度200px*/	
+				border-style: dotted double solid double;  /*边框线型依次为点线、双线、实线、双线*/
+				border-width: 2px 4px 3px 4px ;     /*边框粗细依次为2px、4px、3px、4px*/
+				border-color: #555 #F00 #F00 #F00; /*边框颜色依次为灰色、红色、红色、红色*/	
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		  <img src="img/led_jgd14.jpg" class="img1">
+		  <img src="img/led_jgd14.jpg" class="img2">
+		</div>
+	</body>
+</html>

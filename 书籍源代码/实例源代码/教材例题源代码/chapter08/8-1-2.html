@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>使用CSS制作不同区域的超链接风格</title>
+		<style type="text/css">
+		  a:link {						/*未访问的链接*/
+		     font-size: 13pt;
+		     color: #0000ff;
+		     text-decoration: none;
+		  }
+		  a:visited {					/*访问过的链接*/
+		     font-size: 13pt;
+		     color: #00ffff;
+		     text-decoration: none;
+		  }
+		  a:hover {				    	/*鼠标经过的链接*/
+		     font-size: 13pt;
+		     color: #cc3333;
+		     text-decoration: underline;		/*下划线*/
+		  }
+		  .navi {
+		     text-align:center;
+		     background-color: #cccccc;
+		  }		
+		  .navi a:link {
+		     color: #ff0000;
+		     text-decoration: underline;
+		     font-size: 17pt;
+		     font-family: "华文细黑";
+		  }
+		  .navi a:visited {
+		     color: #0000ff;
+		     text-decoration: none;
+		     font-size: 17pt;
+		     font-family: "华文细黑";
+		  }
+		  .navi a:hover {
+		     color: #00f;
+		     font-family: "华文细黑";
+		     font-size: 17pt;
+		     text-decoration: overline;		/*上划线*/
+		  }
+		  .footer{
+		    text-align:center;
+		    margin-top:120px;
+		  }
+		</style>
+    </head>
+	<body>
+		  <h2 align="center">Led灯网店</h2>
+		  <p class="navi">
+			   <a href="#">首页</a>&nbsp;&nbsp;&nbsp;
+			   <a href="#">关于</a>&nbsp;&nbsp;&nbsp;
+			   <a href="#">客服</a>&nbsp;&nbsp;&nbsp;
+			   <a href="#">联系</a>
+		  </p>
+		  <div class="footer">
+		     版权所有 &copy;&nbsp;&nbsp;<a href="#">客户服务中心</a>
+		  <div>
+	</body>
+</html>

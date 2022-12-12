@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态新闻列表</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;			
+			}
+			body{
+				font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+				font-size:13px;			/*文字大小为12px*/
+				color:#333;			/*文字颜色为灰色*/
+			}
+			#content{
+				width:800px;
+				height:auto;	
+			}
+			ul{
+				list-style: none;
+			}
+			/*标题样式开始*/
+			.tt{
+			    height: 40px;
+			    width:785px;
+			    margin-left:15px ;  /*左外边距15px*/
+			    border-bottom: 2px solid #D6D6D6;  /*下边框样式，用下边框实现水平线效果*/
+			}
+			h3{
+			   font-weight: 500;
+			   font-size:16px ;
+			   width:90px;            /*标题空间长度90px*/
+			   border-bottom:2px solid #0091D8;	/*下边框样式，实现标题下面的横线效果，长度90px*/		 
+			   padding: 10px  0 10px 5px;  /*内边距上、右、下、左分别是10px、0、10px、5px*/ 			
+			}
+			/*新闻列表样式开始*/ 
+			.news{
+				width:780px;
+				height: auto;
+				margin: 20px 0px 20px 20px;			
+			}			
+			.news ul li{
+				width:780px;
+				height:30px;
+				float:left;
+				margin: 5px;					
+				border-bottom:1px dotted #999999 ;	 /*下边框1px浅灰色点线*/
+			}
+			.news ul li:nth-last-child(1){   /*定义最后一个列表项的样式*/
+				border-bottom:0px;                   /*无下边框*/			
+			}	
+			.news ul li:before{
+				content: url(img/triangle-icon-blue.jpg); /*列表项内容前插入图片*/
+				margin-right:5px ;
+			}
+	
+			.news ul li .date{	
+				float:right;
+				margin-right: 10px;	
+			}
+			/*分页导航样式开始*/
+			.page{
+			clear: both;
+			text-align: center;
+			padding:15px 0 ;
+			}
+			.page ul{
+			margin-top: 10px;   /*上外边距10px*/
+			}
+			.page  li{
+			display: inline;     /*在一行上显示*/
+			}			
+			.page  a{
+			display:inline-block;  
+			width:20px;
+			height: 20px;
+			border: 1px solid #0091D8;  /*定义边框*/
+			font-size: 14px;
+			text-align: center;
+			line-height: 20px;
+			font-family: "宋体";
+			text-decoration: none;
+			}
+			.page  li:nth-child(3) a{   /*第三个li加背景*/
+				background-color: #0091D8;
+			}
+			.page  a:hover{             /*设置鼠标悬停时背景色*/
+			background-color: #DDD;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="tt">
+				<h3>公司新闻</h3>			
+			</div>
+			<div class="news">			
+				 <ul> 
+					<li>ADB智能LED头灯系统发展迅速，ADB智能LED头灯兴起</a>
+					<span class="date">2018-03-30</span></li>
+					<li>LED灯具国内业务市场研讨会 LED灯具国内业务2017-4-6
+					<span class="date">2018-03-03</span></li>
+					<li>车用、MiniLED等新产品助力，亿光&荣创看好营运服务工作.
+					<span class="date">2018-03-03</span></li>
+					<li>OLED照明市场的机会与挑战 -- LEDinside
+					<span class="date">2018-03-03</span></li>
+					<li>江苏加快半导体照明产业发展，2020年规模将达1200亿.
+					<span class="date">2018-03-03</span></li>
+					<li>智能照明进入高速发展，工业及商业为最大应用场景.
+					<span class="date">2018-03-03</span></li> 
+					<li>景观坝LED洗墙灯怎么选购?您不能忽略这些细节！
+					<span class="date">2018-03-03</span></li>
+					<li>LED点光源的线路板使用什么材质的质量好？
+					<span class="date">2018-03-03</span></li>
+					<li>智能照明进入高速发展，工业及商业为最大应用场景.
+					<span class="date">2018-03-03</span></li> 
+				</ul>	
+			</div>
+			<div class="page">	
+			     <hr>
+			     <ul>
+			      <li><a href="">&laquo;</a></li>
+			      <li><a href="">&#8249;</a></li>	
+			      <li><a href="">1</a></li>
+			      <li><a href="">2</a></li>
+			      <li><a href="">3</a></li>
+			      <li><a href="">4</a></li>
+			      <li><a href="">5</a></li>
+			      <li><a href="">6</a></li>
+			      <li><a href="">&#8250;</a></li>
+			      <li><a href="">&raquo;</a></li>
+			    </ul>
+	      </div>
+		</div>	
+	</body>
+</html>

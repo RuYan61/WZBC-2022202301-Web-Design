@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>canvas元素示例</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "#EEEEFF";  
+    context.fillRect(0, 0, 150, 150);  
+  	context.beginPath();
+	context.fillStyle = '#c00';
+	context.strokeStyle = '#c00';
+	context.moveTo(75,40);
+	context.bezierCurveTo(75,37,70,25,50,25);
+	context.bezierCurveTo(20,25,20,62.5,20,62.5);
+	context.bezierCurveTo(20,80,40,102,75,120);
+	context.bezierCurveTo(110,102,130,80,130,62.5);
+	context.bezierCurveTo(130,62.5,130,25,100,25);
+	context.bezierCurveTo(85,25,75,37,75,40);
+	context.fill();
+	context.stroke();
+}
+    context.closePath();  
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>canvas中绘制红心</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

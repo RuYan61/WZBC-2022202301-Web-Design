@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html> 
+<html>  
+<head>   
+<meta charset="UTF-8">  
+<title>canvas元素示例</title>  
+<script >
+function draw(id) {  
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "#EEEEFF";  
+    context.fillRect(0, 0, 400, 300); 
+    context.fillStyle = "green";  
+    context.strokeStyle = "red";  
+    context.lineWidth=1;
+    context.fillRect(50,50,100,100);  
+    context.strokeRect(50,50,100,100);  
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>canvas中画矩形</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

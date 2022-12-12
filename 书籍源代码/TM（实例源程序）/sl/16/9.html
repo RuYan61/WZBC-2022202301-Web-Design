@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset=utf-8 />
+<title>事件捕捉实例</title>
+</head>
+<body>
+   <video >
+      <source  src="2.ogv" type="video/ogg" />
+    </video>
+   <div class="videochrome paused">
+   	<div class="controls">
+      <div class="scrub">
+       <table width="150" border="0" cellpadding="0" cellspacing="0">
+  		<tr>
+   			 <td width="50" scope="row"><button class="play" title="play">播放</button></td>
+    		<td width="50" align="center"><div class="duration">0:00</div></td>
+    		<td width="50" align="center"><div class="loaded"><div class="buffer"><div class="playhead"><span>0:00</span></div></div></div></td>
+  		</tr>
+	   </table>
+      </div>
+     </div>
+    </div>
+<script>
+var video = document.getElementsByTagName('video')[0],
+    //通过querySelector方法获标签的值并赋给变量
+	wrapper = document.querySelector('.videochrome'),
+    buffer = document.querySelector('.videochrome .controls .buffer'),
+	playhead = buffer.querySelector('.playhead'),
+    play = wrapper.querySelector('.play'),
+    duration = wrapper.querySelector('.duration'),
+    currentTime = playhead.querySelector('span');
+video.addEventListener('loadeddata', canplay, false);	//使用事件监听准备播放
+video.addEventListener('play', playEvent, false);	//使用事件播放
+video.addEventListener('pause', pausedEvent, false);	//播放暂停
+video.addEventListener('ended', function () {	//播放结束后停止播放
+  this.pause();	//显示暂停播放
+}, false);
+video.addEventListener('durationchange', updateSeekable, false);	//播放的时长被改变
+video.addEventListener('timeupdate', updatePlayhead, false);	//使用事件监听方式捕捉事件
+function canplay() {	//调用canplay函数初始化媒体
+  initControls();
+}
+function playEvent() {
+  play.innerHTML = '暂停';
+}
+function pausedEvent() {
+  play.innerHTML = '播放';
+}
+function asTime(t) {
+  t = Math.round(t);
+  var s = t % 60;
+  var m = ~~(t / 60);
+  return m + ':' + two(s);
+}
+function two(s) {
+  s += "";
+  if (s.length < 2) s = "0" + s;
+  return s;
+}
+function updateSeekable() {
+  duration.innerHTML = asTime(video.duration); //媒体文件的总播放时间
+}
+function updatePlayhead() {
+  currentTime.innerHTML = asTime(video.currentTime);  //媒体的当前播放时间
+}
+function initControls() {
+  duration.innerHTML = asTime(video.duration);   //将播放时间以分和秒的形式输出
+  play.onclick = function () {
+    if (video.ended) {  //如果媒体播放结束，播放时间从0开始
+      video.currentTime = 0;
+    }
+    video[video.paused ? 'play' : 'pause']();  //通过三元运算执行播放和暂停
+  };
+}
+</script>
+</body>
+</html>

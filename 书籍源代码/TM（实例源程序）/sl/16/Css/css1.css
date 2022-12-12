@@ -1,0 +1,75 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	font-size:12px
+}
+video{
+	border:solid #ccc 5px;
+	padding:3px; 
+	background-color:#eee
+}
+/* 实例5增加样式 */
+#spnStatus{    
+	display:none;
+	position:absolute;
+	top:105px;
+	left:130px;
+	background-color:#eee;
+	padding:8px;
+}
+/* 实例7增加样式 */
+#pTool{
+	position:absolute;
+	width:340px;
+	top:192px;
+	left:16px
+}
+#pTool span{
+	float:left;
+	color:#fff;
+	font-weight:bold;
+	font-size:15px;
+	margin-right:1px;
+	background-color:#5e5e5e;
+	cursor:pointer;
+	text-align:center;
+	width:55px;
+	line-height:26px;
+	height:26px;
+	padding:3px
+}
+/* 实例8增加样式 */
+#spnResult{
+	display:none;
+	position:absolute;
+	font-size:14px;
+	top:92px;
+	left:102px;
+	background-color:#eee;
+	padding:10px;
+	border:1px solid #5e5e5e;
+	width:160px
+}
+/* 实例9增加样式 */
+#pTip{
+	position:absolute;
+	top:9px;
+	left:9px;
+	width:366px;
+	height:31px;
+	line-height:31px;
+	margin:4px; 
+	font-weight:bold
+}
+#pTip .spnL{
+	padding:0px 10px 0px 10px; 
+	float:left;
+	color:#fff; 
+	background-color:#5e5e5e
+}
+#pTip .spnR{
+	padding:0px 10px 0px 10px; 
+	float:right;
+	color:#fff; 
+	background-color:#5e5e5e
+}

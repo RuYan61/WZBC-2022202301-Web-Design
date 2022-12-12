@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>fillStyle</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
+    context.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ',0)';
+     context.fillRect(j*25,i*25,25,25);
+    }
+  }
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>fillStyle实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

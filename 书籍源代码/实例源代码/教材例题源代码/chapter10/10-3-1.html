@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5动画</title>
+		<style>
+			div{
+				width:350px;
+				height: 350px;
+				border: 1px solid #333333;
+				font-size: 40px;
+				text-align: center;
+				line-height: 350px;
+				position: relative;
+				z-index:10;    /*堆叠顺序*/
+			}
+			img{
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				top:25px;
+				left:25px;
+				z-index: 100;
+				animation-name:sdmove;   /*定义动画名称*/
+				animation-duration:5s;     /*定义动画时间*/
+				animation-timing-function:linear; /*过渡效果*/
+				animation-iteration-count:infinite; /*动画无限循环*/
+				animation-direction:alternate;      /*动画逆向交替循环播放*/
+				/*animation:sdmove 5s linear infinite alternate;*/ /*简写代码*/
+				 /*Safari and Chrome 浏览器兼容代码*/ 
+				-webkit-animation-name:sdmove; 
+				-webkit-animation-duration:5s;	
+				-webkit-animation-timing-function:linear;				
+				-webkit-animation-iteration-count:infinite;
+				-webkit-animation-direction:alternate;
+				/*-webkit-animation:sdmove 5s linear infinite alternate;*/ /*简写代码*/
+
+			}
+			@keyframes sdmove{
+				from{transform: scale(1,1) rotate(0deg);opacity: 1;}
+				5%{transform: scale(1,1) rotate(0deg);opacity: 1;}
+				50%{transform: scale(0.3,0.3) rotate(180deg);opacity: 0.3;}
+				95%{transform: scale(1,1) rotate(360deg);opacity: 1;}
+				to{transform: scale(1,1) rotate(360deg);opacity:1;}
+			}
+			@-webkit-keyframes sdmove{
+				from{transform: scale(1,1) rotate(0deg);opacity: 1;}
+				5%{transform: scale(1,1) rotate(0deg);opacity: 1;}
+				50%{transform: scale(0.3,0.3) rotate(180deg);opacity: 0.3;}
+				95%{transform: scale(1,1) rotate(360deg);opacity: 1;}
+				to{transform: scale(1,1) rotate(360deg);opacity:1;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			LED射灯
+			<img src="img/led_sd1.jpg"> 
+		</div>
+	</body>
+</html>

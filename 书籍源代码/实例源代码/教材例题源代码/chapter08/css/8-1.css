@@ -1,0 +1,36 @@
+			*{                          /*设置所用元素的默认样式*/
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box; /*元素的宽度和高度包括元素的边框和内边距*/
+			}
+			ul{
+				width:820px;
+				height: 480px;
+				list-style: none;    /*不显示列表项目标记符号*/
+				border:1px solid #555;
+				margin: 10px auto;   /*外边距上下0PX，左右auto*/
+			}
+			ul li{
+				width:180px;
+				height:210px;
+				float:left;      /*向左浮动*/  
+			        margin:10px;
+				font-size:14px ;
+				text-align: center;  /*文本水平居中*/		
+				display: inline;		
+			}			
+			ul li img{
+				width:180px;
+				height:180px;
+				margin:10px;
+			}
+			ul li a{
+				text-decoration: none; /*文本无修饰，即去掉默认的下划线*/
+				color:#444;
+			}
+			 ul li a:hover {          /*鼠标悬停时的样式*/
+				color:#0091D8;
+			}
+			 ul li a:hover img{      /*鼠标悬停时的图片样式*/
+				border:2px solid #0091D8;     /*图片加边框*/
+			}

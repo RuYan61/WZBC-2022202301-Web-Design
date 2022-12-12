@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>简单Web留言本</title>
+<style type="text/css" media="screen">   
+            *{ margin: 0; padding: 0;}   
+            body{ font-size: 14px;}   
+            ul,li{ list-style: none; list-style-position: outside;}   
+            body{ width: 740px; margin: 0 auto;}   
+            .form_item{ min-height: 30px; margin-top: 5px;text-indent:0;}   
+            .form_item label{ display: block; line-height: 24px;}   
+            .form_item input[type="text"]{ width: 180px; height:24px; line-height: 24px;}   
+            .form_item textarea{ vertical-align: top;}   
+            .form_item input[type="submit"],input[type="button"]{ width: 80px; height:24px; line-height: 24px; border:1px solid #ff6600; border-radius:4px; background:#ff6600; outline:none; color:#fff; cursor: pointer;}   
+            .form_item input[type="submit"]{ margin-right: 50px;}   
+            .form_item input[type="submit"]:hover{ position: relative; top:1px;}   
+               
+            .datalist{ min-height:300px; border-top: 1px solid #e4e4e4;}   
+            .datalist dt{ height: 30px; line-height: 30px; background:#e8e8e8;}   
+            .datalist dd{ min-height:30px;line-height: 24px; text-indent:2em;}   
+            .datalist time{ float: right; }   
+               
+            p{ line-height: 24px; text-indent:2em;}   
+            table { width:100%; border:1px solid #e4e4e4; }   
+            table td{ border:1px solid #e4e4e4;}   
+               
+            .msg{ height:24px; line-height: 24px;}   
+            .count_wrap{ border:1px solid #e4e4e4; text-indent: 0;}   
+            .count_wrap .count{ margin-right: 50px;}   
+            .count{ color: red; font-size: 18px;}   
+        </style>   
+<script type="text/javascript">
+function saveStorage(id)
+{
+    var data = document.getElementById(id).value;
+    var time = new Date().getTime();
+    localStorage.setItem(time,data);
+    alert("数据已保存。");
+    loadStorage('msg');
+}
+function loadStorage(id)
+{
+    var result = '<table border="1">';
+    for(var i = 0;i < localStorage.length;i++)
+    {
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
+        var date = new Date();
+        date.setTime(key);
+        var datestr = date.toGMTString();
+        result += '<tr><td>' + value + '</td><td>' + datestr + '</td></tr>';
+    }
+    result += '</table>';
+    var target = document.getElementById(id);
+    target.innerHTML = result;
+}
+function clearStorage()
+{
+    localStorage.clear();
+    alert("全部数据被清除。");
+    loadStorage('msg');
+}
+</script>
+</head>
+<body>
+<h1>简单Web留言本</h1>
+<textarea id="memo" cols="60" rows="10"></textarea><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="添加" onclick="saveStorage('memo');">
+<input type="button" value="全部清除" onclick="clearStorage('msg');">
+
+<hr>
+<p id="msg"></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+ body{
+    font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为12px*/
+	color:#444444;			/*文字颜色为灰色*/		    	
+	}
+ table{
+	width:1050px;
+	border:1px solid #DDD;
+	padding: 0px;
+	margin:0 auto;			/*左右居中对齐*/					
+	}
+.td1{
+	vertical-align:top;
+	width:80px;
+	border-right: 1px solid #DDDDDD;
+	}
+.td2{
+	width:80px;
+	border-right: 0px;
+	}
+h4{margin:10px 0px 5px 0px;}
+.img1{
+	width:160px;
+	 height: 141px;	
+}
+a{
+	display: inline-block;      /*转换成行内块元素*/
+	width:75px;
+	height: 26px;
+	background-color: #494949;
+	font-size:13px;
+	color:#FFF ;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 15px;   
+	line-height:26px ;
+	}

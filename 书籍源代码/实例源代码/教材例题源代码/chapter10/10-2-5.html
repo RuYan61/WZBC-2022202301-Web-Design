@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transform-origin()</title>
+		<style>	
+			div{
+				width:300px;
+				height:300px;
+				border: 1px solid #888888;
+			}	
+			img{
+				width:300px;
+				height:300px;
+					
+			}
+			img:hover{
+				transform: rotate(180deg) scale(0.3,0.3);  /*顺时针旋转180度，缩小0.3倍*/
+			    -webkit-transform:rotate(180deg) scale(0.3,0.3);/*Safari and Chrome 浏览器兼容代码*/
+				-moz-transform:rotate(180deg) scale(0.3,0.3);  /*Firefox浏览器兼容代码*/
+				-o-transform:rotate(180deg) scale(0.3,0.3);    /*Opera浏览器兼容代码*/
+			    transform-origin:right bottom;  /*改变元素基点位置到右下角 */
+				-webkit-transform-origin:right bottom;
+				-moz-transform-origin:right bottom;
+				-o-transform-origin:right bottom;
+				transition-duration: 3s;    /*过渡效果持续3秒*/
+				-webkit-transition-duration: 3s;
+				-moz-transition-duration: 3s;
+				-o-transition-duration: 3s;		
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/风车.jpg">
+		</div>
+	</body>
+</html>
+ 

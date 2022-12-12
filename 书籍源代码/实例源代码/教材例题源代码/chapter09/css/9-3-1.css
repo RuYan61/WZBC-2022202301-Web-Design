@@ -1,0 +1,68 @@
+body{       /*定义网页全局样式*/
+	 font-size:14px; 
+	 font-family:"宋体";
+     }                
+body,form,input,p{ padding:0; margin:0; border:0;}      /*重置浏览器的默认样式*/
+div{     /*用DIV布局，定义页面的背景*/
+	width:100%;
+	height: auto;
+	background-image:linear-gradient(180deg,#9cf,#FFF);  /*线性渐变背景*/
+	margin: 0;
+	padding-top:80px;
+	padding-bottom: 80px;
+}
+form{    /*定义表单的样式，使表单显示成一个矩形框。*/
+	width:400px;
+	height:200px;
+	padding-top:0px;
+	margin:50px auto;                      /*使表单在浏览器中居中*/
+	background:#f5f8fd;                    /*为表单添加背景颜色*/
+	border-radius:1px;                    /*设置圆角边框 */
+	border:1px solid #4faccb;	
+	box-shadow: 2px 2px 1px #6B5D50;     /*设置边框投影*/
+	
+}
+/*表单中元素一行作为一个段落进行样式控制，先进行段落样式定义*/
+  p{
+	text-align: center;
+  } 
+.p1{        /*定义管理员登录表单中蓝色矩形块*/
+	height: 40px;
+	background: #4FACFB;
+	margin: 0;
+}
+.p2{       /*定义账号一行的上外边距*/
+	margin-top:25px; 
+} 
+.p3,.p4{      /*定义密码、按钮一行的上外边距*/
+	margin-top:15px;
+} 
+ 
+p span {
+	width:50px;
+	display: inline-block; 
+	text-align: right;
+	}                 
+.account,.password{        /*对文本框设置共同的宽、高、边框、内边距*/ 
+	width:152px;                                      
+	height:20px;                                 
+	border:1px solid #777;
+    padding:2px 2px 2px 20px; 
+    font-size: 13px;
+} 
+.account{                 /*定义账号文本框的背景、文本颜色*/
+	 background:url(../img/1.jpg) no-repeat 3px center #FFF;
+	 color: #999;
+}                     
+.password{             /*定义密码文本框的背景*/                                                    
+	 background:url(../img/2.jpg) no-repeat 3px center #FFF;
+}
+.btn01,.btn02{           /*定义按钮的样式*/
+	width:60px; 
+	height:25px; 
+	font-size:12px;
+	border-radius:3px;               /*设置圆角边框*/ 
+	border:1px solid #6b5d50; 	
+	margin: 5px 0 0 30px;
+	background:#DDD;              /*设置按钮的背景色*/ 
+	}

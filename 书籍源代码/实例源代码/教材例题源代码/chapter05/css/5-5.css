@@ -1,0 +1,62 @@
+*{
+	padding: 0;
+	margin:0;			
+  }
+body{
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为12px*/
+	color:#333;			/*文字颜色为灰色*/
+}
+#content-right{
+	width:800px;
+	height: auto;
+}
+#content-right .tt{
+    height: 40px;
+    width:785px;
+    margin-left:15px ;  /*左外边距15px*/
+    border-bottom: 2px solid #D6D6D6;  /*下边框样式，用下边框实现水平线效果*/
+}
+#content-right h3{
+   font-weight: 500;
+   font-size:16px ;
+   border-bottom:2px solid #0091D8; /*下边框样式，实现标题下面的横线效果*/
+   width:140px;             /*标题空间长度90px*/
+   padding: 10px 0 9px 5px;    /*内边距上、右、下、左分别是10px、0、7px、5px*/  
+}
+.works_show{
+	width:780px;
+	height: auto;
+	margin: 20px 0px 20px 20px;
+	text-align: center;
+}
+.works_show h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 5px 0 0px 15px;
+	text-align: left;
+}
+.works_show ul{
+	list-style: none;
+	padding:2px 15px 10px 15px ;
+	text-align: left;
+}
+.works_show ul li{
+	padding:5px 0px 0px 1px ;
+}
+.works_show ul li:before{
+	content: url(../img/star_red.gif);  /*列表项内容前插入图片*/
+	margin-right: 1px;
+}
+.works_show .tp-small{   /*设置小图的样式*/
+width:111px;
+	height:70px;
+}
+.works_show  p{	           
+	display:none ;   /*大图所在段不显示，即大图不显示*/
+	}
+.works_show .tp-big{    /*设置大图的样式*/ 
+    width:460px;
+	height:270px;
+}
+.works_show :target{display:block;}/* 链接到的内容显示 */	

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>图片的裁剪</title>  
+<script >
+function draw(id)
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    var gr = context.createLinearGradient(0,200,150,0);  
+    gr.addColorStop(0,'rgb(255,255,0)');  
+    gr.addColorStop(1,'rgb(0,255,255)');  
+    context.fillStyle = gr;  
+    context.fillRect(0, 0, 200, 200);  
+    image = new Image();  
+    image.onload = function()
+    {  
+        drawImg(context,image);  
+    };  
+    image.src = "imagemr.jpg";  
+}  
+function drawImg(context,image)
+{  
+    createyuanClip(context);  
+    context.drawImage(image,-50,-80,300,300);  
+}  
+function createyuanClip(context)
+{  
+     context.beginPath();  
+        context.arc( 100, 100, 75, 0, Math.PI * 2, true);  
+        context.closePath();  
+   context.clip();  
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

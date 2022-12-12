@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fileReader方法示例</title>
+</head>
+<body>
+<p>
+    <label>请选择一个文件：</label>
+    <input type="file" id="file" />
+    <input type="button" value="读取图像" onclick="readFile ()"/>
+</p> 
+<div name="result" id="result">
+      <!-- 这里用来显示读取结果 -->
+</div>
+<script language=javascript>
+var result=document.getElementById("result");
+var file=document.getElementById("file");
+if (typeof FileReader == 'undefined' )
+{
+   result.innerHTML = "<p>抱歉，你的浏览器不支持 FileReader</p>";
+   file.setAttribute( 'disabled','disabled' );
+}
+//将文件以Data URL形式进行读入页面
+function readFile ()
+{
+    //检查是否为图像文件
+    var file = document.getElementById("file").files[0];
+    if(!/image\/\w+/.test(file.type))
+    {
+        alert("请确保文件为图像类型");
+        return false;
+    }    
+    var reader = new FileReader();
+    //将文件以Data URL形式进行读入页面
+    reader.readAsDataURL(file);
+    reader.onload = function(e)
+    {
+       var result=document.getElementById("result");
+       //在页面上显示文件
+       result.innerHTML = '<img src="'+this.result+'" alt=""/>'
+    }
+}
+
+</script>
+</body>
+</html>
+

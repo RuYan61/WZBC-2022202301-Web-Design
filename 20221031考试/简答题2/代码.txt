@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>产品销量季度数据报表</title>
+	</head>
+
+	<body>
+		<table width="600" border="6" align="center">
+			<!--设置表格宽度为550px，边框6px-->
+			<caption><!--设置表格的标题-->
+				
+			</caption>
+			
+			<thead style="background: #0af"><!--设置报表的页眉-->
+				
+				
+			</thead>
+			<!--页眉结束-->
+			<tbody style="background: #6cc"><!--设置报表的数据主体-->
+				
+				
+			</tbody>
+			<!--数据主体结束-->
+			<tfoot style="background: #ff6"><!--设置报表的数据页脚-->
+				
+				
+			</tfoot>
+			<!--页脚结束-->
+		</table>
+	</body>
+
+</html>

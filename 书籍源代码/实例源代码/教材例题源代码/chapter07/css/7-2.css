@@ -1,0 +1,69 @@
+*{                                  /*针对所有的HTML元素定义样式*/
+	margin:0px;                       /*外边距为1px*/ 
+    padding:0;                       /*内边距为0px*/ 
+    box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+body{					/*设置页面整体样式*/
+	width:1050px;            /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+}
+/*头部样式*/
+header{
+	height:80px;              /*高度250px*/
+	background-color:#4FACFB;  /*背景颜色*/
+}
+/*导航栏样式*/
+nav {	
+	height:36px;
+	background-color:#0091D8;
+}
+/*网页中部内容样式*/
+#content{	
+	height:auto;	   /*自动默认高度*/
+	background-color: #008B8B;
+}
+/*首页中部-热销产品样式*/
+#content #hotproduct{
+	height:auto;
+	background-color:#FFCC00;	
+}
+/*首页中部-主体部分样式开始*/		
+#content #main{	
+	clear: both;                         /*清除两侧浮动*/
+	height:300px;
+}
+#main .main_left,#main .main_center,#main .main_right{ /*定义主体部分的左、中、右三块*/
+	margin:3px 0px  ; 	
+	height: 295px;		                                    	
+	position: relative;                               /*相对定位*/
+}
+#main .main_left{
+	width:307px;
+	float: left;     	 /*向左浮动*/
+	background-color:#FFFF00;
+}
+#main .main_center{
+	width:390px;
+	float: left;     	 /*向左浮动*/
+	background-color:#84F14D;
+}
+#main .main_right{
+	width:350px;
+	float: right;     	 /*向右浮动*/
+	background-color:#99CCFF;
+}
+/* footer样式 */
+ footer{ 		
+ 	clear: both;          /*清除两侧浮动*/
+	height:50px;
+	background: #545861;
+}
+/*在线咨询样式*/
+.online_zx{
+	width:100px;
+	height: 80px;
+	position: fixed;
+	top:30px;
+	right:10px;
+	background-color:#00FFFF;
+}

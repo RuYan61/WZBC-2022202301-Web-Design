@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>隐藏空单元格边框</title>
+		<style>
+			.t1{			
+				border-collapse: collapse;
+				width:300px;
+				border-spacing:15px ;    /*单元格间距15px,但是不起作用*/
+			}
+		    .t2{			
+				width:300px;
+				border-spacing: 15px;   /*单元格间距15px*/
+				empty-cells: hide;  	/*隐藏空单元格边框*/	
+			}
+		</style>
+	</head>
+	<body>
+		<caption>表格边框合并</caption>
+		<table border="1" class="t1" >
+			<tr><td>LED景观灯</td><td>LED霓虹灯</td></tr>
+			<tr><td>LED数码灯</td><td></td></tr>
+		</table>
+		<br>
+		<caption>表格边框分开，隐藏空单元格边框</caption>
+		<table border="1" class="t2">
+			<tr><td>LED景观灯</td><td>LED霓虹灯</td></tr>
+			<tr><td>LED数码灯</td><td></td></tr>
+		</table>
+	</body>
+</html>

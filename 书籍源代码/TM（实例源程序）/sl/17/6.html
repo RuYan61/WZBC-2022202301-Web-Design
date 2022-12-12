@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>canvas元素示例</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "#EEEEFF";  
+    context.fillRect(0, 0, 150, 150);  
+  	context.beginPath();
+	context.moveTo(75,25);
+	context.strokeStyle = '#c00';
+	context.quadraticCurveTo(25,25,25,62.5);
+	context.quadraticCurveTo(25,100,50,100);
+	context.quadraticCurveTo(50,120,30,125);
+	context.quadraticCurveTo(60,120,65,100);
+	context.quadraticCurveTo(125,100,125,62.5);
+	context.quadraticCurveTo(125,25,75,25);
+	context.stroke();
+	context.fill();
+}
+    context.closePath();  
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>canvas中绘制对话框</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

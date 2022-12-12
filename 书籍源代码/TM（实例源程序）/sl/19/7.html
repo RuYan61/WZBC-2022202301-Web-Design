@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>   
+<html>   
+<head>   
+<meta charset="utf-8" />   
+<title>使用transaction方法创建数据表</title>
+<script type="text/javascript">
+function $$(id){  
+  	return document.getElementById(id);
+}
+var db;
+//单击“创建数据表”时执行
+function CreateTrans_Click(){    
+	//创建/打开数据库    
+	db=openDatabase('Student','1.0','StuManage',2*1024*1024);    
+	if(db){       
+		var strSQL="create table if not exists StuInfo";       
+		strSQL+="(StuID unique,Name text,Sex text,Score int)";       
+		db.transaction(function(tx){           
+			tx.executeSql(strSQL);    
+		},    
+		function(){           
+			Status_Handle("创建数据表出错！");      
+		},       
+		function(){           
+			Status_Handle("创建数据表成功！");       
+		})    
+	}
+} 
+//自定义显示执行过程中状态的函数
+function Status_Handle(message){    
+	$$("pStatus").style.display="block";    
+	$$("pStatus").innerHTML=message;
+}
+</script>
+</head>   
+<body>
+<input id="CreateTrans" type="button" value="创建数据表" class="inputbtn" onClick="CreateTrans_Click();">   
+<p id="pStatus"></p>
+</body>   
+</html>

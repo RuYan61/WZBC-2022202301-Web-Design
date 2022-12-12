@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>strokeStyle</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    for (var i=0;i<6;i++){
+      for (var j=0;j<6;j++){
+        context.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + 
+                         Math.floor(255-42.5*j) + ')';
+        context.beginPath();
+        context.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+        context.stroke();
+      }
+    }
+  }
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>strokeStyle实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

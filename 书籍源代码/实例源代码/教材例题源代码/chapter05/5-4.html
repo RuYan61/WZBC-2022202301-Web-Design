@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>链接伪类应用</title>
+		<style>
+			.link{
+				text-align: center;         
+				font-size: 16px;	
+				color: #fff;		
+				background-color:#545861;
+				height:40px;
+				padding-top: 14px;
+			}
+			.link a:link,a:visited{
+				display:inline-block;         /*内联元素*/	
+				width:70px;					
+				color: #ffffff;
+				padding:0px 8px 0px 8px; 	/*上、右、下、左的内边距依次为15px,8px, 0px,8px*/
+				margin:0 14px 0 14px;	 	/*上、右、下、左的外边距依次为0px,14px, 0px,14px*/
+				text-decoration:none; 		/*链接无修饰*/
+				text-align:center; 		/*文字居中对齐*/
+			}		
+			.link a:hover,a:active {			/*鼠标悬停链接的样式*/	
+				color:#CCC; 			    /*浅灰色文字*/
+				text-decoration: underline; /*下划线修饰*/  
+			}
+		</style>
+	</head>
+	<body>	
+	    <p class="link">
+	        <a href="#">网站首页</a>|<a href="#">产品中心</a>|<a href="#">联系方式</a>|<a href="#">新闻动态</a>
+        </p>
+	</body>
+</html>

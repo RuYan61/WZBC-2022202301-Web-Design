@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+	function body_onLoad() {
+ 		if (navigator.geolocation) {
+ 		 	navigator.geolocation.getCurrentPosition(geo_onSuccess, geo_onError);
+ 		} else {
+ 			geo_onError();
+ 		}
+ 	}
+ 	function geo_onSuccess(pos) {
+ 		document.getElementById("timestamp").innerHTML = new Date().toLocaleString();
+ 		document.getElementById("accuracySpan").innerHTML = pos.coords.accuracy;
+ 		document.getElementById("altitudeSpan").innerHTML = pos.coords.aktitude;
+ 		document.getElementById("altitudeAccuracySpan").innerHTML = pos.coords.altitudeAccuracy;
+ 		document.getElementById("headingSpan").innerHTML = pos.coords.heading;
+ 		document.getElementById("latitudeSpan").innerHTML = pos.coords.latitude;
+ 		document.getElementById("longitudeSpan").innerHTML = pos.coords.longitude;
+ 		document.getElementById("speedSpan").innerHTML = pos.coords.speed;
+ 	}
+ 	function geo_onError() {
+ 		alert("您当前使用的浏览器不支持Geolocation服务");
+ 	}
+</script>
+</head>
+<body onLoad="body_onLoad();">
+    <h1>当前地理位置信息</h1>
+    <table>
+    <tr>
+        <th>accuracy:</th>
+        <td><span id="accuracySpan"></span></td>
+    </tr>
+    <tr>
+        <th>altitude:</th>
+        <td><span id="altitudeSpan"></span></td>
+    </tr>
+    <tr>
+        <th>altitudeAccuracy:</th>
+        <td><span id="altitudeAccuracySpan"></span></td>
+    </tr>
+    <tr>
+        <th>heading:</th>
+        <td><span id="headingSpan"></span></td>
+    </tr>
+    <tr>
+        <th>latitude:</th>
+        <td><span id="latitudeSpan"></span></td>
+    </tr>
+    <tr>
+        <th>longitude:</th>
+        <td><span id="longitudeSpan"></span></td>
+    </tr>
+    <tr>
+        <th>speed:</th>
+        <td><span id="speedSpan"></span></td>
+    </tr>
+    </table>
+    <p id="timestamp"/>
+</body>
+</html>

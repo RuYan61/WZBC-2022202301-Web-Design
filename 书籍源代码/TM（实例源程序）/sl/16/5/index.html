@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><video>元素的error属性</title>
+<link href="../Css/css1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="jscript" src="../Js/js1.js">
+</script>
+</head>
+<body>
+<div>
+  <video id="vdoMain" src="../2.mp4"
+         width="360px" height="220px" 
+         onError="Video_Error(this)"
+         controls="true" poster="../1.jpg">
+         你的浏览器不支持视频
+  </video>
+  <span id="spnStatus"></span>
+<div>
+</body>
+</html>

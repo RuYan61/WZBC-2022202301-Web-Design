@@ -1,0 +1,29 @@
+*{                                  /*针对所有的HTML元素定义样式*/
+	margin:1px;                       /*外边距为1px*/ 
+    padding:0;                       /*内边距为0px*/ 
+    box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+body{					/*设置页面整体样式*/
+	width:1050px;            /*宽度1050px*/
+	margin:0 auto;			/*页面自动居中对齐*/	
+}
+/*头部样式*/
+header{
+	height:80px;              /*高度250px*/
+	background-color:#4FACFB;  /*背景颜色*/
+}
+/*导航栏样式*/
+nav {	
+	height:36px;
+	background-color:#0091D8;
+}
+/*网页中部内容样式*/
+#content{	
+	height:auto;	   /*自动默认高度*/
+	background-color: #008B8B;
+}
+/* footer样式 */
+ footer{ 		
+	height:50px;
+	background: #545861;
+}

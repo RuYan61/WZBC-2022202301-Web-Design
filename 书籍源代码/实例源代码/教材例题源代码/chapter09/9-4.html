@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>会员注册</title>
+		<link rel="stylesheet" href="css/9-4.css" />
+	</head>
+	<body>
+	   <div id="bg">
+		  <form action="#" method="get" autocomplete="off">
+             <h2>会员注册</h2>
+             <p><span>登录名：</span><input type="text" name="user_name" placeholder="手机号"  required/>（必填）</p>
+             <p><span>密&nbsp;&nbsp;码：</span><input type="password" name="user_pwd" value="" required/>（必填,不能少于8位）</p>
+             <p><span>确认密码：</span><input type="password" name="pwd1" value="" required />（必填,不能少于8位）</p>
+             <p><span>真实姓名：</span><input type="text" name="real_name"  pattern="^[\u4e00-\u9fa5]{0,}$"  required />（必填，只能输入汉字）</p>
+             <p><span>真实年龄：</span><input type="number" name="real_age" value="24" min="15" max="120" required/>（必填）</p>
+             <p><span>出生日期：</span><input type="date" name="birthday" value="1990-10-1" required/>（必填）</p>
+             <p><span>电子邮箱：</span><input type="email" name="myemail" placeholder="name@163.com" required multiple/>（必填）</p>
+             <p><span>身份证号：</span><input type="text" name="card" required pattern="^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$"/>（必填，18位身份证号）</p>
+             <p><span>手机号码：</span><input type="tel" name="telphone" pattern="^\d{11}$" required/>（必填）</p>
+             <p><span>个人主页：</span><input type="url" name="myurl" list="urllist" placeholder="http://www.sdwrp.com" pattern="^http://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$"/>（请选择网址）
+                <datalist id="urllist">
+                   <option>http://www.sdwrp.com</option>
+                   <option>http://www.baidu.com</option>
+                   <option>http://www.w3school.com.cn</option>
+                </datalist>
+             </p>
+           <p class="btn">
+               <input type="submit" value="提交"/>
+               <input type="reset" value="重置"/>
+           </p>
+      </form>
+	</div> 
+	
+</body>
+</html>
+ 

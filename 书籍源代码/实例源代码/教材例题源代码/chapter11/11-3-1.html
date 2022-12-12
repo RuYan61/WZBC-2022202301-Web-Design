@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Video的宽高设置</title>
+		<style>	
+			.main_left{ /*定义主体部分的左侧块的样式*/
+				width:310px;  
+				height: 410px;
+				background-color: #44AAFF;
+				padding-left: 20px;
+			}
+			h3{
+				font-size:16px;                            
+				color: #545861;
+				font-weight: 500;     /*文字粗细500*/
+				margin-bottom:12px ;  /*下外边距20px*/
+			}
+			 .main_left video{
+				width:285px;
+				height: 200px;
+				background-color:#CCCCCC;
+				border: 1px solid #BBBBBB;
+			}
+			.main_left .lianxi{   
+				width:253px;            /*内容宽度293px*/
+				height:125px;
+				border:1px solid #DDDDDD;
+				border-radius: 5px;
+				margin-top: 15px;
+				padding: 0 15px;	/*设置内边距，上下0 ，左右各15px*/
+			}
+		</style>
+	</head>
+	<body>
+	   <div class="main_left">
+			<h3>&nbsp;产品展示</h3>			
+			<video src="media/led.mp4" autoplay="autoplay" loop="loop"></video>
+			<div class="lianxi"> 联系方式</div>
+	   </div>		
+	</body>
+</html>
+ 

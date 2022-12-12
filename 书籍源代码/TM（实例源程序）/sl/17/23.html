@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>  
+<html> 
+<head>   
+<meta charset="UTF-8">  
+<title>使用图片</title>  
+<script >
+function draw(id) 
+{   
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "red";  
+    context.fillRect(0, 0, 400, 300);  
+    image = new Image(); 
+    image.src = "imagemr.jpg";  
+    image.onload = function() 
+    {  
+        drawImg(context,image);  
+    };       
+}  
+function drawImg(context,image)
+{  
+    var i=0;
+    //首先调用该方法绘制原始图像
+    context.drawImage(image,0,0,100,100); 
+    //绘制将局部区域进行放大后的图像
+    context.drawImage(image,23,5,57,90,110,0,100,100);  
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

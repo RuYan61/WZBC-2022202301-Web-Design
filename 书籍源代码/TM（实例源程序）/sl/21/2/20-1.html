@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+// 创建执行运算的线程
+var worker = new Worker("kwb.js");
+//接收从线程中传出的计算结果
+worker.onmessage = function(event) 
+{
+    //消息文本放置在data属性中,可以是任何JavaScript对象.
+    alert("合计值为" + event.data + "。");
+};
+function kwb() 
+{
+    //获取文本框的值
+	var num1 = parseInt(document.getElementById("num1").value);
+	var num = parseInt(document.getElementById("num").value);
+   //对2个文本框提交的值进行判断
+   if(num<num1){		
+	   alert('提交的运算不符合要求');
+	   return false;
+	}
+	//将获取的文本框的值用@拼接成字符串
+	var subs=num1+'@'+num;
+	//将数值传给线程
+	worker.postMessage(subs);
+}
+</script>
+</head>
+<body>
+<h1>对给定2个数字之间所有数值的计算</h1>
+<hr color="#FF0000"><br>
+初始数值:<input type="text1" id="num1"><br><br>
+终极数值:<input type="text" id="num"><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="kwb()">计算</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>重复径向渐变</title>
+		<style>
+			.d1{
+				border:1px solid #333;
+				margin:5px ;
+				width:200px;
+				height: 100px;
+		        background: repeating-radial-gradient(ellipse, red , yellow 5%, #1E90FF 10%, white 20%);
+				
+			}
+			.d2{
+				border:1px solid #333;
+				margin:5px ;
+				width:200px;
+				height: 100px;
+				background: repeating-radial-gradient(circle at top, red, white 5%, #1E90FF 10%, white 15%);			
+			}		
+		</style>
+	</head>
+	<body>
+		<div class="d1"></div>
+		<div class="d2"></div>
+	</body>
+</html>

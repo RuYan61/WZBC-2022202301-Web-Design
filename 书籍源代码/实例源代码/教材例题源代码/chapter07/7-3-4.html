@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>两列定宽中间自适应的三列结构</title>
+		<style type="text/css">
+			* {
+				margin:0;
+				padding:0;
+			}
+			body {
+				font-family:"宋体";
+				font-size:18px;
+				color:#000;
+			}
+			header {
+				height:50px;
+				background:#0CF;
+			}
+			#container {
+				overflow:auto;			/*溢出自动延展*/
+			}
+			#mainBox {
+				float:left;
+				width:100%;
+				background:#DDDDDD;
+				height:200px;
+			}
+			#content {
+				height:200px;
+				background:#44AAFF;
+				margin:0 210px 0 310px;		/*右外边距空白210px，左外边距空白310px*/
+			}
+			#submainBox {
+				float:left;
+				height:200px;
+				background:#00FFFF;
+				width:300px;
+				margin-left:-100%;   /*margin-left为-100%，正好使左栏位于页面左侧*/
+			}
+			#sideBox {
+				float:left;
+				height:200px;
+				width:200px;
+				margin-left:-200px;   /*左浮动-200px，大小为其本身的宽度200px*/
+				background:#00FFFF;
+			}
+			footer {
+				clear:both;
+				height:50px;
+				background:#3CF;
+			}
+		</style>
+	</head>
+	<body>
+		<header>这里是header区域</header>
+		<div id="container">
+			<div id="mainBox">
+			    <div id="content">主要内容区域——常用的CSS布局</div>
+			</div>
+		   <div id="submainBox">次要内容区域——常用的CSS布局</div>
+			<div id="sideBox">这里是侧边栏</div>
+		</div>
+		<footer>这里是footer区域，放置版权信息等内容</footer>
+	</body>
+</html>

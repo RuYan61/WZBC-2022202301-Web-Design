@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transform:skew()</title>
+		<style>
+			nav{
+			    background-color: #EEEEEE;	    
+			}
+			a{
+				display: inline-block;
+				width:90px;
+				height: 30px;
+				line-height:30px;
+				text-align: center;
+				background-color:#FF8800;
+				text-decoration: none;	
+				margin: 0 2px;		
+			}
+			a:hover{
+				transform:skew(-25deg); /*沿垂直方向顺时针转25度*/
+				-webkit-transform:skew(-25deg); /*Safari and Chrome 浏览器兼容代码*/
+				-moz-transform:skew(-25deg);    /*Firefox浏览器兼容代码*/
+				-o-transform:skew(-25deg);     /*Opera浏览器兼容代码*/
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#">网站首页</a>
+			<a href="#">产品展示</a>
+			<a href="#">客户案例</a>
+			<a href="#">关于我们</a>			
+		</nav>
+	</body>
+</html>

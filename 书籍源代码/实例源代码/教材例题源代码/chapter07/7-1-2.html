@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>布局2</title>
+		<style>
+			*{margin: 0px;}
+			body{
+				width:620px;
+			    margin: 0 auto;
+			}
+			#container{				
+				height:auto;				
+				background-color:#BBBBBB;				
+			}
+			header{						
+				height:50px;
+				background-color: #4FACCB;	
+				margin-bottom: 3px;						
+			}
+			#main{			
+			height:300px;
+			background-color:#99CCFF;
+			}
+			#main #mainbox{
+			width:415px;
+			height:295px;
+			background-color:#4FACFB;	
+			float: left;
+			}
+			#main #sidebox{
+			width:200px;
+			height:295px;
+			background-color:#4FACFB;	
+			float: right;
+			}
+			footer{
+				clear: both;		
+				height:50px;
+				background-color:#008000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header>此处显示  "header" 的内容</header>
+			<div id="main">
+			    <div id="mainbox">此处显示  id= "mainbox" 的内容</div>
+			    <div id="sidebox">此处显示  id= "sidebox" 的内容</div>
+			</div>
+			<footer>此处显示  "footer" 的内容</div>
+		</div>
+   </body>
+
+</html>

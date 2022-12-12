@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="uft-8"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />    
+<title>利用HTML5和百度地图实现位置定位</title> 
+<script src="http://api.map.baidu.com/api?v=1.3" type="text/javascript"></script> 
+</head> 
+<body> 
+<h1>明日科技
+	<a title="明日科技" href="http://www.mrbccd.com" target="_blank">http://www.mrbccd.com</a>
+</h1>
+<p id="geo_loc"></p> 
+<div style="width:700px;height:550px;border:#ccc solid 1px;" id="dituContent"></div> 
+<script> 
+if(navigator.geolocation){ 
+    	navigator.geolocation.getCurrentPosition( 
+        	function(p){ 
+            	document.getElementById('geo_loc').innerHTML="纬度"+p.coords.latitude+"经度"+p.coords.longitude; 
+            	createMap(p.coords.latitude,p.coords.longitude); 
+        	}, 
+        	function(err){ 
+            	document.getElementById('geo_loc').innerHTML=err.code+"\n"+err.message; 
+        	} 
+    	); 
+}else{ 
+    	document.getElementById('geo_loc').innerHTML="您的浏览器不支持地图定位"; 
+} 
+function createMap(a,b){ 
+    	var map=new BMap.Map("dituContent");           
+    	var point=new BMap.Point(b,a);          
+    	map.centerAndZoom(point,15);            
+	map.enableScrollWheelZoom();           
+    	window.map=map;                 
+} 
+</script> 
+</body> 
+</html>

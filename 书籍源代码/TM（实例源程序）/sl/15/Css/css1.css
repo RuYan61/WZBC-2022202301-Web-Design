@@ -1,0 +1,104 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	font-size:12px
+}
+/*示例1*/
+#divFrame{
+	border:solid 1px #ccc;
+	width:200px;   
+	height:100px; 
+	top:20px; 
+	left:30px;
+	position:absolute;
+}
+#divTitle{
+	background-color:#eee;
+	height:23px;
+	line-height:23px;
+	cursor:move;
+	padding-left:10px
+}
+/*示例2*/
+.wPub{
+	width:230px
+}
+#divDrag{
+	float:left;
+	width:50px; 
+	height:50px; 
+	border:solid 1px #ccc; 
+	background-color:#f2f2f2
+}
+#divArea{
+	clear:both;
+	margin-top:30px; 
+	float:right; 
+	width:85px; 
+	height:85px; 
+	border:solid 3px #666;
+	padding:20px;
+	background-color:#eee
+}
+#divTips{
+	margin-left:10px;
+	float:left;
+	width:160px
+}
+/*示例6*/
+ul{
+	list-style-type:none;
+	padding:0px;
+	height:106px;
+	width:330px
+}
+ul li{
+	height:23px
+}
+ul li img{
+	width:68px;
+	height:96px;
+	border:solid 1px #ccc;
+	padding:3px
+}
+ul li span{
+	float:left;
+	width:70px;
+	padding:5px;
+}
+.liT{
+	border-bottom:solid 1px #ccc;
+	background-color:#eee;
+    font-weight:bold
+}
+.liC{
+	border-bottom:dashed 1px #ccc;
+}
+.liF{
+	float:left;
+	margin-right:5px;
+}
+/*示例7*/
+.img95{
+	width:95px;
+	height:101px
+}
+#divRecycle{
+	margin-top:30px; 
+	width:65px; 
+	float:right;
+    height:75px;
+}
+.HaveRyl{
+	background:url(../Images/img06.jpg)
+}
+.EmptRyl{
+	background:url(../Images/img07.jpg)
+}
+#pStatus{
+	display:none;
+	border:1px #ccc solid; 
+	background-color:#eee;
+	padding:6px 12px 6px 12px;
+	margin-left:2px
+}

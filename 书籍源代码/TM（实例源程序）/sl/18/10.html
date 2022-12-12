@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg高斯滤镜</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="320">
+    <g>
+        <image xlink:href="images/flower.jpg" x="0" y="0" width="400"></image>
+        <text x="80" y="200" fill="blue" transform="scale(1.5)">使用滤镜前</text>
+    </g>
+    <g>
+        <image xlink:href="images/flower.jpg" x="450" y="0" width="400" filter="url(#filter)"></image>
+        <text x="380" y="200" fill="blue" transform="scale(1.5)">使用滤镜后</text>
+        <defs>
+            <filter id="filter">
+                <feGaussianBlur in="SourceGaraphic" stdDeviation="3" id="blur"/>
+            </filter>
+        </defs>
+    </g>
+</svg>
+</body>
+</html>

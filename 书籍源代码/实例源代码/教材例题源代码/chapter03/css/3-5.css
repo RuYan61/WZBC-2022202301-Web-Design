@@ -1,0 +1,27 @@
+/*LED射灯产品详细信息页面部分样式*/
+.led_sd_details{
+	width:780px;
+	height: auto;
+	margin: 20px 0px 20px 20px;
+}
+ .led_sd_details img{
+	width:250px;
+	height:250px;
+	float: left;
+	margin-right:30px;
+}
+ .led_sd_details h4{
+	font-size: 14px;
+	font-weight:600 ;
+	margin: 10px 0;
+}
+ .led_sd_details ul{	
+	list-style-position: inside;	/*将列表修饰符定义在列表之内*/
+}
+.led_sd_details ul li{
+ 	line-height: 22px;
+ 	font-size: 13px;
+ }
+ .led_sd_details .number{
+ 	color: red;
+ } 

@@ -1,0 +1,29 @@
+/*分页导航样式*/
+.page{
+clear: both;
+text-align: center;
+padding:15px 0 ;
+}
+ .page ul{
+margin-top: 10px;   /*上外边距10px*/
+}
+.page li{
+display: inline;    /*在一行上显示*/
+}
+
+.page  a{
+display:inline-block;
+width:20px;
+height: 20px;
+border: 1px solid #0091D8;
+font-size: 14px;
+text-align: center;
+line-height: 20px;
+font-family: "宋体";
+}
+.page  li:nth-child(3) a{   /*第三个li加背景*/
+	background-color: #0091D8;
+}
+.page  a:hover{   /*设置鼠标悬停时背景色*/
+background-color: #DDD;
+}

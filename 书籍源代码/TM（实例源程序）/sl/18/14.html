@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animateTransform绘制动画</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="200">
+    <text x="20" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt1">愿</text>
+    <text x="60" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt2">你</text>
+    <text x="100" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt3">的</text>
+    <text x="140" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt4">青</text>
+    <text x="180" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt5">春</text>
+    <text x="220" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt6">不</text>
+    <text x="260" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt7">负</text>
+    <text x="300" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt8">梦</text>
+    <text x="340" y="-10" fill="red" style="font: bold 40px/20px ''" id="txt9">想</text>
+    <animateTransform dur="0.5s" attributeName="transform" begin="0s" xlink:href="#txt1"
+                      type="translate" from="20,-10" to="20 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="1s" xlink:href="#txt2"
+                      type="translate" from="60,-10" to="60 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="1.5s" xlink:href="#txt3"
+                      type="translate" from="100,-10" to="100 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="2s" xlink:href="#txt4"
+                      type="translate" from="140,-10" to="140 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="2.5s" xlink:href="#txt5"
+                      type="translate" from="180,-10" to="180 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="3s" xlink:href="#txt6"
+                      type="translate" from="220,-10" to="220 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="3.5s" xlink:href="#txt7"
+                      type="translate" from="260,-10" to="260 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="4s" xlink:href="#txt8"
+                      type="translate" from="300,-10" to="300 150" repeatCount="1" fill="freeze"/>
+    <animateTransform dur="0.5s" attributeName="transform" begin="4.5s" xlink:href="#txt9"
+                      type="translate" from="340,-10" to="340 150" repeatCount="1" fill="freeze"/>
+</svg>
+</body>
+</html>

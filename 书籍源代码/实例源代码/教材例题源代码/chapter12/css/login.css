@@ -1,0 +1,75 @@
+body{
+	 font-size:14px; 
+	 font-family:"宋体";
+     }                /*全局控制*/
+  body,form,input,p{ padding:0; margin:0; border:0;}       /*重置浏览器的默认样式*/
+  div{
+	width:100%;
+	height: auto;
+	/*background-image:rlinear-gradient(180deg,#4FACFB,#FFF);*/
+	background-image:linear-gradient(180deg,#9cf,#FFF);
+	margin: 0;
+	padding-top:80px;
+	padding-bottom: 80px;
+}
+
+  form{
+	width:400px;
+	height:200px;
+	padding-top:0px;
+	margin:50px auto;                      /*使表单在浏览器中居中*/
+	background:#f5f8fd;                    /*为表单添加背景颜色*/
+	border-radius:1px;                    /*设置圆角边框 */
+	border:1px solid #4faccb;	
+	box-shadow: 2px 2px 1px #6B5D50;     /*设置边框投影*/
+	
+}
+  p{
+	text-align: center;
+  } 
+.p1{
+	height: 40px;
+	background: #4FACFB;
+	margin: 0;
+}
+.p2{
+	margin-top:25px; 
+
+} 
+.p3{
+	margin-top:15px;
+
+} 
+.p4{
+	margin-top:15px;
+
+}                 
+p span{
+	width:50px;
+	display:inline-block; 
+	text-align:right;
+	}                 
+.account,.password{                                   /*对文本框设置共同的宽、高、边框、内边距*/ 
+	width:152px;                                      
+	height:20px;                                 
+	border:1px solid #777;
+    padding:2px 2px 2px 20px; 
+    font-size: 13px;
+} 
+.account{                                         /*定义第一个文本框的背景、文本颜色*/
+	 background:url(../img/1.jpg) no-repeat 3px center #FFF;
+	 color:#999;
+}                     
+.password{                                        /*定义第二个文本框的背景*/                                                    
+	 background:url(../img/2.jpg) no-repeat 3px center #FFF;
+}
+.btn01,.btn02{
+	width:60px; 
+	height:25px; 
+	font-size:12px;
+	border-radius:3px;                        /*设置圆角边框*/ 
+	border:1px solid #6b5d50; 	
+	margin: 5px 0 0 30px;
+	background:#DDD;              /*设置按钮的背景色*/ 
+	}
+      

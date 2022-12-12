@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>lineCap属性</title>  
+<script >
+function draw(id) {
+    var context = document.getElementById('canvas').getContext('2d');
+    var lineCap = ['butt','round','square'];
+
+  	context.strokeStyle = '#09f';
+  	context.beginPath();
+  	context.moveTo(10,10);
+  	context.lineTo(140,10);
+  	context.moveTo(10,140);
+  	context.lineTo(140,140);
+ 	context.stroke();
+
+  	context.strokeStyle = 'black';
+  for (var i=0;i<lineCap.length;i++){
+    context.lineWidth = 15;
+    context.lineCap = lineCap[i];
+    context.beginPath();
+    context.moveTo(25+i*50,10);
+    context.lineTo(25+i*50,140);
+    context.stroke();
+  }
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<h1>lineCap属性实例</h1>  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>

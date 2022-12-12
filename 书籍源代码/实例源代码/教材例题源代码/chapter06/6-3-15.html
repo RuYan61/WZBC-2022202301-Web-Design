@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>重复径向渐变</title>
+		<style>
+			body{
+				font-size: 30px;
+				color: red;
+				text-align: center;
+			}
+			.d1{				
+				width:440px;
+				height:70px;		  
+		        background:linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),url(img/bg4.jpg);
+		        margin: 10px;
+			}
+			.d2{				
+				width:440px;
+				height:70px;
+				background:url(img/bg4.jpg);	
+				margin: 10px;	  
+		       
+			}
+			.d3{				
+				width:440px;
+				height:70px;
+				background:url(img/bg4.jpg);	
+				opacity: 0.5;
+				margin: 10px;	  
+		       
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="d1">d1:渐变透明度,RGBA模式</div>
+		<div  class="d2">d2:无透明度设置</div>
+		<div class="d3">d3:opacity设置透明度</div>
+	</body>
+</html>
+

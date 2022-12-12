@@ -1,0 +1,33 @@
+
+body{
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为12px*/
+	color:#333;			/*文字颜色为灰色*/
+	}
+div{
+	width: 250px;	
+	border:1px solid #D6D6D6;
+	padding:3px;
+	margin-bottom:15px ;	
+	}
+img{
+	width:249px;
+	height:190px;
+	}
+.works_name,.info{   /*项目名称和项目信息的共同样式*/
+	line-height: 23px;	
+	padding-left:0 0 0 3px;
+	margin: 0;
+	}
+.works_name{               /*项目名称加粗显示*/
+	font-weight: 600;
+	}
+.info{	                  
+	color: #777777;
+	}
+.info  .date{
+	color: #4FACCB;
+	}
+.info  .num{
+	color:#FF0000;
+}

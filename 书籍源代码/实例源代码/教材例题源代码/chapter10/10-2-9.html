@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>-webkit-perspective属性</title>
+		<style>
+			div{
+				width:380px;
+				height:330px;
+				border: 1px solid #333333;	
+				-webkit-perspective: 500; /* Safari 和 Chrome ,透视效果*/		
+				-webkit-perspective-origin:left;	/*改变 3D 元素的底部位置为left*/	
+			}
+			img{
+				width:300px;
+				height: 250px;				
+				margin:40px;
+			}
+			img:hover{
+			-webkit-transform:rotateY(50deg);			
+			transition:all 2s ease 0s;
+			}
+		</style>
+			
+	</head>
+	<body>
+		<div>
+			<img src="img/pic1.jpg" >
+		</div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>文字阴影效果</title>
+</head>
+<body>
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <!--滤镜容器-->
+        <filter id="Filter" width="150%" height="150%">
+            <!--创建阴影效果-->
+            <feOffset result="offOut" in="SourceGraphic" dx="6" dy="6" />
+            <!--创建高斯模糊-->
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
+            <!--将上面两个效果组合到一起-->
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+    <text x="0" y="20" filter="url(#Filter)" fill="#fb6c97" style="font-weight: bolder;" transform="scale(1.5)">心怀不惧，方能翱翔于天际</text>
+</svg>
+</body>
+</html>

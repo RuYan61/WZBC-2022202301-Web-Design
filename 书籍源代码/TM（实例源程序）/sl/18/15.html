@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>svg中的线性渐变</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <linearGradient id="g1" x1="">
+            <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+            <stop offset="33.3%" stop-color="#f00" stop-opacity="1"/>
+            <stop offset="67%" stop-color="#0f0" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#00f" stop-opacity="1"/>
+        </linearGradient>
+    </defs>
+    <rect x="40" y="40" width="200" height="100" fill="url(#g1)"></rect>
+</svg>
+</body>
+</html>

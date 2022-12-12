@@ -1,0 +1,54 @@
+/*二级页面中间-左侧样式*/
+*{
+	margin:0;
+	padding: 0;
+}
+#content-left{
+	width:250px;
+	height:auto;             /*自动默认高度*/
+	margin: 10px;           
+}
+/*设置左侧纵向导航菜单的样式*/
+#content-left ul{    
+	width:250px;        
+	list-style: none;        /*不显示项目列表符号*/ 
+	background:#fff;         /*白色背景*/ 
+	border-radius:10px;      /*10px圆角半径*/ 
+	margin:0 auto;           /*上下外边界为0，左右根据宽度自适应相同值（即居中）*/           
+	}
+#content-left ul li{        /*设置列表项的样式*/
+	width:170px;           /*宽度170px,加上左内边距80px,正好250px*/
+	height:50px;	
+	margin-bottom:1px;     /*下外边距1px*/
+	padding-left:80px ;	   /*左内边距80px*/
+	background:#DDDDDD ;
+	font-size:14px; 	
+	line-height:55px;     /*行高55px*/
+	text-align:left;       /*文字左对齐*/	
+	}
+#content-left ul li a:link, #content-left ul li a:visited{
+	color:#333;	
+	text-decoration: none;      /*不要下划线*/
+}
+#content-left ul li a:hover{
+	color: #0091D8;	
+}
+
+/*需要单独控制的列表项,第一个和最后一个列表项样式*/		
+#content-left ul .tp{
+	font-size:18px;
+	font-weight:500;
+	padding:0px ;                  /*内边距0px*/
+	text-align: center;
+	width:250px; 
+	height:65px;
+	line-height:80px ;
+	background: #BBB;
+	border-radius:10px 0 0 0;  /*左上圆角半径10px,其他角为直角*/
+	}
+#content-left ul .yj{
+	height:20px;
+	border-radius:0 0 0 10px;  /*左下圆角半径10px,其他角为直角*/
+	margin-bottom:5px ;        /*下外边距5px*/
+	}
+/*二级页面中间-左侧样式结束*/

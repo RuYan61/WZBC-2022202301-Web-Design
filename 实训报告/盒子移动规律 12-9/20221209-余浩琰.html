@@ -1,0 +1,52 @@
+<!doctype html>
+    <html>
+        <head>
+		    <meta charset="utf-8">
+			<title>不同位置定位</title>
+			<style type="text/css">
+			    body{ margin:0px; padding:0px; font-size:15px; font-weight:bold;}
+				.father{
+				margin:10px auto;
+				width:300px;
+				height:300px;
+				padding:10px;
+				background:#ccc;
+				border:1px solid #000;
+				position:relative;          /*相对定位，但不设置偏移量*/
+				}
+				.child01,.child02,.child03,.child04{
+				width:80px;
+				height:20px;
+				line-height:20px;
+				background:#ff0;
+				border:1px solid #000;
+				margin:10px 0px;
+				text-align:center;
+				}
+				.child02{
+				position:relative;         /*绝对定位*/
+				left:200px;                /*距左边线150px*/
+				top:100px;                 /*距顶部边线100px*/
+				}
+				.child03{
+				position:absolute;         /*绝对定位*/
+				left:300px;                /*距左边线150px*/
+				top:100px;                 /*距顶部边线100px*/
+				}
+				.child04{
+				position:fixed;         /*绝对定位*/
+				left:300px;                /*距左边线150px*/
+				top:100px;                 /*距顶部边线100px*/
+				}
+			</style>
+		</head>
+		<body>
+		    <div class="father">
+			    <div class="child02">相对定位盒</div>
+				<div class="child01">静态定位盒</div>
+				<div class="child03">绝对定位盒</div>
+				<div class="child04">固定定位盒</div>
+			</div>
+	    </body>
+    </html>
+

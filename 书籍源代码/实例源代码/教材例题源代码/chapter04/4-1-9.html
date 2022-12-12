@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>文本修剪</title>
+	<style type="text/css">
+		ul{
+			width:310px;                /*宽度310px*/
+			height:100px; 	
+			border:1px solid #000;     /*1px黑色实线边框*/
+			padding: 5px;              /*内边距5px*/
+			}
+		li{	
+			line-height: 28px;
+			white-space:nowrap;       /*强制文本不能换行*/
+			overflow:hidden;           /*修剪溢出文本*/
+			text-overflow:ellipsis;  /*用省略标记标示被修剪的文本*/
+		}
+	</style>
+	</head>
+	<body>
+	    <h3>热点新闻</h3>
+	    <ul>
+		   <li>一带一路国家基础设施发展指数报告出炉。</li>
+	  	   <li>黑龙江5处新建国家级自然保护区公布。</li>
+	       <li>中国老潜艇非洲显神威 可为总统护航还曾突破北约舰队。</li>
+	    </ul>
+	</body>
+</html>

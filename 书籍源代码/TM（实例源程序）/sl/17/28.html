@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>绘制变形的图形</title>  
+<script >
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    var context=canvas.getContext('2d'); 
+    context.font= 'normal 20px sans-serif';
+	var text = "字符串的宽度为：";
+	var tm1 = context.measureText(text);//执行measureText方法
+    //绘制文字
+    context.fillText(text, 10, 30);
+	context.fillText(tm1.width, tm1.width+10, 30);
+    context.font='bold  30px sans-serif';
+    var tm2 = context.measureText(text);//执行measureText方法
+    //绘制文字
+    context.fillText(text, 10, 60);
+	context.fillText(tm2.width, tm2.width+10, 60);
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

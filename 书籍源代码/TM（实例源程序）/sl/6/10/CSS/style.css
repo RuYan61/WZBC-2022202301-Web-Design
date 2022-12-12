@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除标签的默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*页面的整体大小*/
+div {
+	width: 1200px;
+	margin: 20px auto;
+}
+/*导航文字的样式*/
+h3 {
+	height: 50px;
+	color: #fff;
+	line-height: 50px;
+	background: #f00;
+}
+/*商品信息的文字信息的样式*/
+h4, p {
+	float: left;
+	width: 280px;
+	text-align: center;
+	margin-left: 100px;
+}
+p {
+	color: #9a9a9a;
+	font-size: 14px;
+}

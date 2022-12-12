@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animateMotion绘制动画</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="250">
+    <path id="path1" d="M30,30 L240 ,30 L240,240 L60,240 L60,60 L210,60 L210,210 L90,210 L90,90 L180,90,
+    L180,180 L120,180  L120,120, L150,120 L150,150" fill="none" stroke="#a5d9ff" stroke-width="2"/>
+    <rect x="-10" y="-10" width="20" height="20" fill="#fd4b7b" id="rect"/>
+    <animateMotion dur="15s" repeatCount="indefinite" fill="remove" xlink:href="#rect" calcMode="linear">
+        <mpath xlink:href="#path1"/>
+    </animateMotion>
+</svg>
+</body>
+</html>

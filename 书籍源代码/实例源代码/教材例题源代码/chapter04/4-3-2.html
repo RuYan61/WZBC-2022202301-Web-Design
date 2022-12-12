@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表项标记位置</title>
+		<style>
+			ul{
+				width:200px;
+				height:80px;
+				border: 1px solid #999;	
+			}
+			li{
+				line-height: 22px;
+				border: 1px solid #333;		
+			}			
+			ul.oustside{
+				list-style-position: outside; /*设置列表项目标记放置在文本以外*/
+			}
+			ul.inside{
+				list-style-position: inside; /*设置列表项目标记放置在文本以内*/			
+			}
+		</style>
+	</head>
+	<body>
+		<h3>产品中心</h3>
+		<ul class="oustside">    	   
+           <li>LED景观路灯</li>           
+           <li>LED霓虹灯</li>
+           <li>LED瓦楞灯</li>          
+        </ul>
+        <ul class="inside">
+           <li>LED数码灯</li>
+           <li>LED点光源</li>
+           <li>LED墙角灯</li>         
+        </ul>
+	</body>
+</html>

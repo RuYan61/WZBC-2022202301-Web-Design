@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>绘制变形的图形</title>  
+<script >
+function star(context)
+{
+	var n = 0;
+	var dx = 100;
+	var dy = 0;
+	var s = 50;
+	context.beginPath();//创建路径
+	context.fillStyle = 'rgba(255,0,0,0.5)';//设置填充五角星的颜色
+	// 绘制五角星
+	var x = Math.sin(0);
+	var y = Math.cos(0);
+	var dig = Math.PI / 5 * 4;
+	for(var i = 0;i < 5;i++)
+	{
+		var x = Math.sin(i * dig);
+		var y = Math.cos(i * dig);
+		context.lineTo(dx + x * s,dy + y * s);
+	}
+	context.closePath();//关闭路径
+}
+function draw(id) 
+{  
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    var context = canvas.getContext('2d');  
+    context.fillStyle = "#FFF"; //设置背景色为白色
+    context.fillRect(0, 0, 400, 300);  //创建一个画布
+	context.shadowOffsetX = 10;
+  	context.shadowOffsetY = 10;
+  	context.shadowBlur = 6;
+  	context.shadowColor = "rgba(100, 100, 100, 0.5)";
+    // 图形绘制 
+    context.translate(0,50);  
+    for(var i = 0;i < 4;i++)
+    {  
+        context.translate(50,50);  //图形向左，向下各移动50
+		star(context); //执行star函数
+        context.fill();  
+    }  
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

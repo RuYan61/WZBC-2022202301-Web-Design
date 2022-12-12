@@ -1,0 +1,39 @@
+*{                          /*设置所用元素的默认样式*/
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box; /*元素的宽度和高度包括元素的边框和内边距*/
+}
+ul{
+	width:781px;
+	height: auto;        /*高度自动，根据内容定*/
+	list-style: none;    /*不显示列表项目标记符号*/					
+	margin: 20px 0 0 20px;  /*外边距上和左20px，右和下0px*/
+	}
+ul li{		
+	width: 257px;					
+	display: inline-block;  /*定义行内块级元素*/
+	border:1px solid #D6D6D6;
+	padding: 3px 3px;         /*内边距，上下左右都是4px*/
+	margin-bottom:15px ;	  /*下外边距15px*/	
+	}			
+ul li img{
+	width:249px;
+	height:190px;
+	}
+ul li .works_name,.info{
+	font-size: 13px;
+	line-height: 23px;	
+	padding-left: 3px;   /*左内边距3px*/
+}
+ul li  .works_name{
+	font-weight: 600;    /*加粗600*/
+}
+ul li  .info{	
+	color: #777777;
+}
+ul li .info .date{
+	color: #4FACCB;
+}
+ul li  .info .num{
+	color:#FF0000;
+}

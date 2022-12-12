@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图像大小设置</title>
+		<style>
+			#box{
+				width:300px;
+				height: 200px;
+				padding: 5px;
+				border: 1px dotted #555555;
+			}
+			.img1{
+				width:130px;   /*绝对宽度200px*/
+				height:200px ; /*绝对高度140px*/			
+			}
+			.img2{
+				width:30%;    /*相对宽度30%*/
+				height:50% ;  /*相对高度50%*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		  <img src="img/led_jgd14.jpg" class="img1">
+		  <img src="img/led_jgd14.jpg" class="img2">
+		</div>
+	</body>
+</html>

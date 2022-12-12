@@ -1,0 +1,57 @@
+*{                         /*针对所有的HTML元素定义样式*/
+	margin: 0;            /*外边距为0px*/
+	padding: 0;           /*内边距为0px*/
+	box-sizing: border-box;          /*盒子的宽度值和高度值包含元素的内边距和边框*/ 
+	}
+body{					/*设置页面整体样式*/
+	font-family: "微软雅黑";  /*字体为"微软雅黑"*/
+	font-size:13px;			/*文字大小为13px*/
+	color:#333;			/*文字颜色为灰色*/
+}
+.main_center{	
+	width:390px;	
+	border-left:3px solid #DDD ;         /*左边框3px浅灰色实线*/
+	border-right:3px solid #DDD ;         /*右边框3px浅灰色实线*/  
+	margin-bottom: 10px;                  /*下外边距10px*/
+	float: left;	
+	padding:0px 20px;                                  /*内边距上、下为0px,左、右为20px*/
+	margin-top:20px ;                                  /*上外边距20px*/
+	margin-left: 20px;
+}
+ h3{
+	font-size:16px;                            
+	color: #545861;
+	font-weight: 500;                             /*文字粗细500*/
+	margin-bottom:12px ;                          /*下外边距20px*/
+}
+.main_center ul li{                /*列表项的样式*/
+	border-top:1px dotted #999999;    /*上边框1px灰色点线*/    
+	padding:5px 0px;                   /*上、右、下、左的内边距依次为5px,0px,5px,0px*/
+	white-space: nowrap;       /*强制文本不能换行*/
+	overflow: hidden;          /*隐藏溢出文本*/
+	text-overflow: ellipsis;  /*溢出文本修剪显示省略标记*/
+	line-height: 19px;         /*行高19px*/ 
+}
+/*在列表项内容前插入三角图标*/
+ .main_center ul li:before{
+	content:url(../img/triangle-icon-blue.jpg);	    
+	padding-right:4px;                                       
+}
+ .main_center .date{ 
+	color:#999999;	
+	font-size: 13px;
+	display: block;                          /*块级元素*/              
+	margin: 0 0 10px 10px;                   /*上、右、下、左的外边距依次为0px,0px,10px,10px*/
+}
+/*无序列表中超链接样式定义开始*/
+ ul a{
+	text-decoration: none;          /*文本无修饰*/
+	color:#333333;
+}
+ ul a:link,a:visited{            /**/
+	color:#333333;	
+}
+ ul a:hover{
+	color:red;
+	text-decoration: underline;     /*加下划线*/
+}

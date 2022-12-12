@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html> 
+<html>  
+<head>   
+<meta charset="UTF-8">  
+<title>图片的裁剪</title>  
+<script >
+function draw(id)
+{  
+    var canvas = document.getElementById(id);  
+    var context = canvas.getContext('2d');  
+    var  image = new Image();
+	image.src = "imagemr.jpg";
+	image.onload = function()
+	{
+	context.drawImage(image,0,0);
+	var imagedata = context.getImageData(0,0,image.width,image.height);
+	for(var i =0, n=imagedata.data.length;i<n;i+=4)//使用i+=4确保确保是像素
+	{
+	  imagedata.data[i+0]=255-imagedata.data[i+0];	//得到反向的颜色红色
+	  imagedata.data[i+1]=255-imagedata.data[i+2];	//得到反向的颜色绿色
+	  imagedata.data[i+2]=255-imagedata.data[i+1];	//得到反向的颜色蓝色
+	}	
+	context.putImageData(imagedata,0,0);
+	} ;
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300"></canvas>
+</body>  
+</html>

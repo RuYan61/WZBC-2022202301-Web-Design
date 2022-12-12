@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>向右浮动</title>
+	<style type="text/css">
+		body{
+			margin:15px;
+			font-family:Arial; font-size:15px;
+			}
+		.father{ 			/*设置容器的样式*/
+			background-color:#ffff99;
+			border:1px solid #111111;
+			padding:5px;
+			width:300px;			/*父容器的宽度不够，导致浮动元素“盒子3”向下移动*/
+			float:left;				/*向左浮动*/				
+			}			
+			
+		.father div{ 			/*设置容器中div标签的样式*/
+			padding:10px;				
+			margin:15px;				
+			border:1px dashed #111111;
+			background-color:#90baff;
+			}
+		.father p{ 			/*设置容器中段落的样式*/
+			border:1px dashed #111111;
+			background-color:#ff90ba;
+			}	
+		.son_one{
+			width:80px; 			/*设置元素宽度*/
+			height:140px; 			/*设置元素高度*/
+			float:left;			   /*向左浮动*/				
+		}
+		.son_two{
+			width:100px; 			/*设置元素宽度*/
+			height:100px; 			/*设置元素高度*/		
+		}
+		.son_three{	
+			width:100px; 			/*设置元素宽度*/
+			height:100px; 			/*设置元素高度*/
+		}
+		.son_one,.son_two,.son_three{  /*三个盒子的兄弟样式*/
+			float:left;				   /*向左浮动*/
+		}
+	</style>
+	</head>
+<body>
+	<div class="father">
+		<div class="son_one">盒子1</div>
+		<div class="son_two">盒子2</div>
+		<div class="son_three">盒子3</div>	
+	 
+	</div>
+</body>
+</html>

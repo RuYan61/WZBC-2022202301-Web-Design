@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>   
+<html>
+<head>   
+<meta charset="UTF-8">  
+<title>为文字绘制阴影效果</title>  
+<script >
+function draw(id) {
+	var context = document.getElementById('canvas').getContext('2d');
+		context.shadowOffsetX = 2;
+  		context.shadowOffsetY = 2;
+  		context.shadowBlur = 2;
+  		context.shadowColor = "rgba(0, 0, 0, 0.5)";
+ 
+  		context.font = "20px Times New Roman";
+  		context.fillStyle = "Black";
+  		context.fillText("mingrisoft", 5, 30);
+}
+</script>  
+</head>  
+<body onload="draw('canvas');">  
+<canvas id="canvas" width="400" height="300" ></canvas>
+</body>  
+</html>
